@@ -1,0 +1,9 @@
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\bin\Debug\ConsoleApplication.exe
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\bin\Debug\ConsoleApplication.pdb
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\FrbaCommerce.ABMCliente.resources
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Cliente.Form1.resources
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Properties.Resources.resources
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\FrbaCommerce.csproj.GenerateResource.Cache
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\ConsoleApplication.exe
+C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\ConsoleApplication.pdb
