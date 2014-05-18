@@ -7,3 +7,12 @@ C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCom
 C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\FrbaCommerce.csproj.GenerateResource.Cache
 C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\ConsoleApplication.exe
 C:\Users\Axius\Desktop\TP Frba Commerce 1.0 - 1C 2014\Aplicacion Desktop\FrbaCommerce\obj\Debug\ConsoleApplication.pdb
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\bin\Debug\ConsoleApplication.exe
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\bin\Debug\ConsoleApplication.pdb
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABMCliente.resources
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Cliente.Form1.resources
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Properties.Resources.resources
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.csproj.GenerateResource.Cache
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.exe
+C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.pdb

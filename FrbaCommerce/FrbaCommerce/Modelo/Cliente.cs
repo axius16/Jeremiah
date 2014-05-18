@@ -7,21 +7,21 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 {
     class Cliente
     {
-        UInt32 numeroDocumento;
-        String tipoDocumento;
-        String nombre;
-        String apellido;
-        String mail;
-        
-        String calle;
-        UInt32 numero;
-        String piso;
-        String depto;
+        UInt32 numeroDocumento  { get; set; }
+        String tipoDocumento { get; set; }
+        String nombre { get; set; }
+        String apellido { get; set; }
+        String mail { get; set; }
 
-        UInt32 codigoPostal;
-        DateTime fechaNacimiento;
-        String username;
-        UInt32 cuil;
+        String calle { get; set; }
+        UInt32 numero { get; set; }
+        String piso { get; set; }
+        String depto { get; set; }
+
+        UInt32 codigoPostal { get; set; }
+        DateTime fechaNacimiento { get; set; }
+        String username { get; set; }
+        UInt32 cuil { get; set; }
 
         Telefono[] telefonos;
                
@@ -30,120 +30,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
             this.nombre = nombre;
             this.apellido = apellido;
             this.numeroDocumento = numeroDocumento;
-        }
+        }       
 
-        public UInt32 getNumeroDocumento() {
-            return this.numeroDocumento;
-        }
-        
-        public String getTipoDocumento() {
-            return this.tipoDocumento;
-        }
-
-        public String getNombre(){
-            return this.nombre;
-        }
-
-        public String getApellido(){
-            return this.apellido;
-        }
-
-        public String getMail(){
-            return this.mail;
-        }
-
-        public String getCalle(){
-            return this.calle;
-        }
-
-        public UInt32 getNumero(){
-            return this.numero;
-        }
-
-        public String getPiso(){
-            return this.piso;
-        }
-
-        public String getDepto(){
-            return this.depto;
-        }
-
-        public UInt32 getCodigoPostal(){
-            return this.codigoPostal;
-        }
-
-        public DateTime getFechaNacimiento(){
-            return this.fechaNacimiento;
-        }
-
-        public String getUsername(){
-            return this.username;
-        }
-
-        public UInt32 getCuil(){
-            return this.cuil;
-        }
-
-        public Telefono[] getTelefonos()
-        {
-            return this.telefonos;
-        }
-
-        public void setNumeroDocumento(UInt32 numeroDocumento){
-            this.numeroDocumento = numeroDocumento;
-        }
-
-        public void setTipoDocumento(String tipoDocumento){
-            this.tipoDocumento = tipoDocumento;
-        }
-
-        public void setNombre(String nombre){
-            this.nombre = nombre;
-        }
-
-        public void setApellido(String apellido){
-            this.apellido = apellido;
-        }
-
-        public void setMail(String mail){
-            this.mail = mail;
-        }
-
-        public void setCalle(String calle){
-            this.calle = calle;
-        }
-
-        public void setNumero(UInt32 numero){
-            this.numero = numero;
-        }
-
-        public void setPiso(String piso){
-            this.piso = piso;
-        }
-
-        public void setDepto(String depto){
-            this.depto = depto;
-        }
-
-        public void setCodigoPostal(UInt32 codigoPostal){
-            this.codigoPostal = codigoPostal;
-        }
-
-        public void setFechaNacimiento(DateTime fechaNacimiento){
-            this.fechaNacimiento = fechaNacimiento;
-        }
-
-        public void setUsername(String username){
-            this.username = username;
-        }
-
-        public void setCuil(UInt32 cuil){
-            this.cuil = cuil;
-        }
-
-        public void setTelefonos(Telefono[] telefonos)
-        {
-            this.telefonos = telefonos;
-        }
+       
     }
 }

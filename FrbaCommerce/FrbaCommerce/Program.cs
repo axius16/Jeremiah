@@ -14,9 +14,9 @@ namespace FrbaCommerce
         static void Main()
         {
             System.Console.WriteLine("¡Hola Mundo!");
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Abm_Cliente.Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Abm_Cliente.Form1());
         }
     }
 }
