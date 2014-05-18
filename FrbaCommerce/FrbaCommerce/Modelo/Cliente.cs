@@ -19,7 +19,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 
         public Cliente(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos,
                       List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, UInt32 numeroDocumento, String tipoDocumento, String nombre, String apellido,
-                      String mail, DateTime fechaNacimiento, UInt32 cuil, Direccion direccion)
+                      String mail, DateTime fechaNacimiento, UInt32 cuil, Direccion direccion, List<Publicacion> publicaciones,
+            List<Factura> facturasPagas)
         {
             this.nombreUsuario = nombreUsuario;
             this.password = password;
@@ -29,6 +30,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
             this.preguntasRealizadas = preguntasRealizadas;
             this.roles = roles;
             this.tipoUsuario = tipoUsuario;
+            this.publicaciones = publicaciones;
+            this.facturasPagas = facturasPagas;
 
             this.numeroDocumento = numeroDocumento;
             this.tipoDocumento = tipoDocumento;
@@ -38,6 +41,7 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
             this.fechaNacimiento = fechaNacimiento;
             this.cuil = cuil;
             this.direccion = direccion;
+            
         }       
 
 

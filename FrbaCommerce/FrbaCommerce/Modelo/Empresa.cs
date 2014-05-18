@@ -17,7 +17,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 
         public Empresa(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos, List<Oferta> ofertas, 
                         List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, UInt32 numeroDocumento, String tipoDocumento, 
-                        String razonSocial, String nombreContacto, String mail, DateTime fechaCreacion, UInt32 cuit, Direccion direccion)
+                        String razonSocial, String nombreContacto, String mail, DateTime fechaCreacion, UInt32 cuit, Direccion direccion,
+                        List<Publicacion> publicaciones, List<Factura> facturasPagas)
         {
             this.nombreUsuario = nombreUsuario;
             this.password = password;
@@ -27,6 +28,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
             this.preguntasRealizadas = preguntasRealizadas;
             this.roles = roles;
             this.tipoUsuario = tipoUsuario;
+            this.publicaciones = publicaciones;
+            this.facturasPagas = facturasPagas;
 
             this.razonSocial = razonSocial;
             this.nombreContacto = nombreContacto;

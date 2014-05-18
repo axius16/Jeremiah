@@ -15,11 +15,14 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
         protected List<Pregunta> preguntasRealizadas { get; set; }
         protected List<Rol> roles { get; set; }
         protected String tipoUsuario { get; set; }
+        protected List<Publicacion> publicaciones { get; set; }
+        protected List<Factura> facturasPagas { get; set; }
 
         public Usuario() { }
 
         public Usuario(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos,
-                      List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario){
+                      List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario,
+                        List<Publicacion> publicaciones, List<Factura> facturasPagas){
             this.nombreUsuario = nombreUsuario;
             this.password = password;
             this.habilitado = habilitado;
@@ -28,6 +31,8 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
             this.preguntasRealizadas = preguntasRealizadas;
             this.roles = roles;
             this.tipoUsuario = tipoUsuario;
+            this.publicaciones = publicaciones;
+            this.facturasPagas = facturasPagas;
         }
 
 
