@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
+    <Compile Include="FrbaCommerce\Modelo\Direccion.cs" />
+    <Compile Include="FrbaCommerce\Modelo\Empresa.cs" />
     <Compile Include="FrbaCommerce\Modelo\Funcion.cs" />
     <Compile Include="FrbaCommerce\Modelo\Oferta.cs" />
     <Compile Include="FrbaCommerce\Modelo\Pregunta.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="FrbaCommerce\Login\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaCommerce\Modelo\Usuario.cs" />
     <Compile Include="FrbaCommerce\Modelo\Visibilidad.cs" />
     <Compile Include="FrbaCommerce\Program.cs" />
     <Compile Include="FrbaCommerce\Properties\AssemblyInfo.cs" />

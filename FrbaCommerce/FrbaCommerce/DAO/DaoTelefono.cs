@@ -11,8 +11,8 @@ namespace FrbaCommerce.FrbaCommerce.DAO
         public DaoTelefono(){
         }
 
-        public Telefono getInstance(Decimal numeroTelefono){
-            return new Telefono(numeroTelefono);
-        }
+//        publicTelefono getInstance(Decimal numeroTelefono){
+  //          return new Telefono(numeroTelefono);
+    //    }
     }
 }

@@ -12,7 +12,7 @@ namespace FrbaCommerce.FrbaCommerce.DAO
         }
 
         public Cliente getInstance(String nombre, String apellido, UInt32 numeroDocumento){
-           return new Cliente(nombre, apellido, numeroDocumento);
+           return null;
         } 
         
 
