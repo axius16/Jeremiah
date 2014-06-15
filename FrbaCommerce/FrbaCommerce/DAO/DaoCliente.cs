@@ -13,8 +13,12 @@ namespace FrbaCommerce.FrbaCommerce.DAO
 
         public Cliente getInstance(String nombre, String apellido, UInt32 numeroDocumento){
            return null;
+        }
+
+        static public void persistir(Cliente cliente)
+        {
+            throw new System.Exception();
         } 
-        
 
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FrbaCommerce.Abm_Cliente
+namespace FrbaCommerce.FrbaCommerce.Abm_Empresa
 {
     public partial class Form1 : Form
     {
@@ -54,7 +54,7 @@ namespace FrbaCommerce.Abm_Cliente
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            String textoBusqueda = buscar.Text;
+            String textoBusqueda = l_RazonSocial.Text;
             System.Console.WriteLine("Clic en Buscar");
             System.Console.WriteLine("Buscar: {0}", textoBusqueda);
             this.cargarDatosEntabla();
@@ -88,6 +88,16 @@ namespace FrbaCommerce.Abm_Cliente
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Limpiar_Click(object sender, EventArgs e)
         {
 
         }

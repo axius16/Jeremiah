@@ -7,12 +7,14 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 {
     class Direccion
     {
-        String calle { set; get; }
-        UInt32 numero { set; get; }
-        String piso { set; get; }
-        String departamento { set; get; }
-        String codigoPostal { set; get; }
-        String ciudad { set; get; }
+        public String calle { set; get; }
+        public UInt32 numero { set; get; }
+        public String piso { set; get; }
+        public String departamento { set; get; }
+        public String codigoPostal { set; get; }
+        public String ciudad { set; get; }
+
+        public Direccion(){}
 
         public Direccion(String calle, UInt32 numero, String piso, String departamento, String codigoPostal, String ciudad) {
             this.calle = calle;

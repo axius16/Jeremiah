@@ -41,10 +41,46 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ABMCliente.resx" />
-    <EmbeddedResource Include="FrbaCommerce\Abm Cliente\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrbaCommerce\Abm Cliente\AltaCliente.resx">
+      <DependentUpon>AltaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Cliente\ABMCliente.resx">
+      <DependentUpon>ABMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Cliente\AsignacionTelefonos.resx">
+      <DependentUpon>AsignacionTelefonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Empresa\ABMEmpresa.resx">
+      <DependentUpon>ABMEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Empresa\AltaEmpresa.resx">
+      <DependentUpon>AltaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\ABM Rol\ABMRol.resx">
+      <DependentUpon>ABMRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\ABM Rol\AltaRol.resx">
+      <DependentUpon>AltaRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Login\SeleccionRol.resx">
+      <DependentUpon>SeleccionRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrbaCommerce\Properties\Resources.resx" />
+    <EmbeddedResource Include="FrbaCommerce\Registro de Usuario\BusquedaEmpresa.resx">
+      <DependentUpon>BusquedaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Registro de Usuario\BusquedaCliente.resx">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Registro de Usuario\RegistroUsuario.resx">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Registro de Usuario\AgregarRol.resx">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -53,8 +89,50 @@
     <None Include="FrbaCommerce\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrbaCommerce\Abm Cliente\AltaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Cliente\AltaCliente.Designer.cs">
+      <DependentUpon>AltaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Cliente\AsignacionTelefonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Cliente\AsignacionTelefonos.Designer.cs">
+      <DependentUpon>AsignacionTelefonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Empresa\ABMEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Empresa\ABMEmpresa.Designer.cs">
+      <DependentUpon>ABMEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Empresa\AltaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Empresa\AltaEmpresa.Designer.cs">
+      <DependentUpon>AltaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\ABM Rol\ABMRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\ABM Rol\ABMRol.Designer.cs">
+      <DependentUpon>ABMRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
+    <Compile Include="FrbaCommerce\Login\SeleccionRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Login\SeleccionRol.Designer.cs">
+      <DependentUpon>SeleccionRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrbaCommerce\Modelo\Direccion.cs" />
     <Compile Include="FrbaCommerce\Modelo\Empresa.cs" />
     <Compile Include="FrbaCommerce\Modelo\Factura.cs" />
@@ -65,23 +143,17 @@
     <Compile Include="FrbaCommerce\Modelo\Rol.cs" />
     <Compile Include="FrbaCommerce\Modelo\Rubro.cs" />
     <Compile Include="FrbaCommerce\Modelo\Cliente.cs" />
-    <Compile Include="FrbaCommerce\Abm Cliente\Form1.cs">
+    <Compile Include="FrbaCommerce\Abm Cliente\ABMCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrbaCommerce\Abm Cliente\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrbaCommerce\Abm Cliente\ABMCliente.Designer.cs">
+      <DependentUpon>ABMCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrbaCommerce\Abm Empresa\Form1.cs">
+    <Compile Include="FrbaCommerce\ABM Rol\AltaRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrbaCommerce\Abm Empresa\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrbaCommerce\ABM Rol\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrbaCommerce\ABM Rol\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrbaCommerce\ABM Rol\AltaRol.Designer.cs">
+      <DependentUpon>AltaRol.cs</DependentUpon>
     </Compile>
     <Compile Include="FrbaCommerce\Abm Rubro\Form1.cs">
       <SubType>Form</SubType>
@@ -149,12 +221,6 @@
     <Compile Include="FrbaCommerce\Listado Estadistico\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrbaCommerce\Login\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrbaCommerce\Login\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrbaCommerce\Modelo\Usuario.cs" />
     <Compile Include="FrbaCommerce\Modelo\VentasRealizadas.cs" />
     <Compile Include="FrbaCommerce\Modelo\Visibilidad.cs" />
@@ -162,11 +228,29 @@
     <Compile Include="FrbaCommerce\Properties\AssemblyInfo.cs" />
     <Compile Include="FrbaCommerce\Properties\Resources.Designer.cs" />
     <Compile Include="FrbaCommerce\Properties\Settings.Designer.cs" />
-    <Compile Include="FrbaCommerce\Registro de Usuario\Form1.cs">
+    <Compile Include="FrbaCommerce\Registro de Usuario\BusquedaEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrbaCommerce\Registro de Usuario\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrbaCommerce\Registro de Usuario\BusquedaEmpresa.Designer.cs">
+      <DependentUpon>BusquedaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\BusquedaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\BusquedaCliente.Designer.cs">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\RegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\RegistroUsuario.Designer.cs">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\AgregarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Registro de Usuario\AgregarRol.Designer.cs">
+      <DependentUpon>AgregarRol.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

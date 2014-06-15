@@ -7,15 +7,18 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 {
     class Cliente : Usuario
     {
-        UInt32 numeroDocumento { get; set; }
-        String tipoDocumento { get; set; }
-        String nombre { get; set; }
-        String apellido { get; set; }
-        String mail { get; set; }
-        DateTime fechaNacimiento { get; set; }
-        Usuario usuario { get; set; }
-        UInt32 cuil { get; set; }
-        Direccion direccion { set; get; }
+        public UInt32 numeroDocumento { get; set; }
+        public String tipoDocumento { get; set; }
+        public String nombre { get; set; }
+        public String apellido { get; set; }
+        public String mail { get; set; }
+        public DateTime fechaNacimiento { get; set; }
+        public Usuario usuario { get; set; }
+        public UInt32 cuil { get; set; }
+        public Direccion direccion { set; get; }
+
+        public Cliente() { }
+
 
         public Cliente(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos,
                       List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, UInt32 numeroDocumento, String tipoDocumento, String nombre, String apellido,
