@@ -119,6 +119,7 @@
     <Compile Include="FrbaCommerce\ABM Rol\ABMRol.Designer.cs">
       <DependentUpon>ABMRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaCommerce\Connection\DBConexion.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
     <Compile Include="FrbaCommerce\Login\SeleccionRol.cs">

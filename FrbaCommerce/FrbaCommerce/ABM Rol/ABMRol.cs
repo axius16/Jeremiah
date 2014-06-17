@@ -18,6 +18,7 @@ namespace FrbaCommerce.FrbaCommerce.Abm_Rol
         public Form1()
         {
             InitializeComponent();
+            
                       
         }
 
