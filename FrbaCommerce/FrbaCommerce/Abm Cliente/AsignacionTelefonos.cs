@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 /**/
-namespace FrbaCommerce.FrbaCommerce.Asignacion_telefonos
+namespace FrbaCommerce.Asignacion_telefonos
 {
     public partial class Form1 : Form
     {

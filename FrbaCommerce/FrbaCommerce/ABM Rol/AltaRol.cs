@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FrbaCommerce.FrbaCommerce.ABM_Rol
+namespace FrbaCommerce.ABM_Rol
 {
     public partial class AltaRol : Form
     {

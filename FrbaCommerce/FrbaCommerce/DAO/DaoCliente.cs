@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FrbaCommerce.FrbaCommerce.Modelo;
+using FrbaCommerce.Modelo;
 using FrbaCommerce.Conexion;
 using System.Data.SqlClient;
 using System.Data;
 
 
-namespace FrbaCommerce.FrbaCommerce.DAO
+namespace FrbaCommerce.DAO
 {
     class DaoCliente
     {
@@ -75,18 +75,32 @@ namespace FrbaCommerce.FrbaCommerce.DAO
 
         static public void persistir(Cliente cliente)
         {
+            if (cliente.idCliente == 0)
+            {
+                insertCliente(cliente);
+            }
+            else {
+                updateCliente(cliente);
+            }
+                        
+        }
+
+        private static void updateCliente(Cliente cliente)
+        {
             String fecha = cliente.fechaNacimiento.ToString("d");
 
             String sql =
-            "insert into DD.Usuario_Cliente " +
-            "(id_usuario, id_domicilio, tipo_doc, "+
-            "nro_doc, apellido, nombre, fecha_nac, cuil, telefono) " +
-            "values " +
-            "(isnull((select MAX(id_usuario)+1 from DD.Usuario_Cliente), 1), 1, 1, " +
-            cliente.numeroDocumento+", '" + cliente.apellido + "', '"+
-            cliente.nombre + "', '" + fecha + "', '" +
-            cliente.cuil+"', '"+cliente.mail+"')";
-            
+            "update DD.Usuario_Cliente " +
+"set id_domicilio = '"+cliente.numeroDocumento+"', " +
+"tipo_doc = '"+cliente.tipoDocumento+"', " +
+"nro_doc = '"+cliente.numeroDocumento+"', " +
+"apellido = '"+cliente.apellido+"', " +
+"nombre = '"+cliente.nombre+"', " +
+"fecha_nac = '" + fecha + "', " +
+"cuil = '"+cliente.cuil+"', " +
+"telefono = '" + cliente.mail + "' " +
+"where id_usuario = "+cliente.idCliente;
+
             SqlConnection conn = DBConexion.getConn();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
@@ -94,8 +108,47 @@ namespace FrbaCommerce.FrbaCommerce.DAO
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
             conn.Close();
-            ;            
-        } 
+            ;
+        }
 
+        private static void insertCliente(Cliente cliente)
+        {
+            String fecha = cliente.fechaNacimiento.ToString("d");
+
+            String sql =
+            "insert into DD.Usuario_Cliente " +
+            "(id_usuario, id_domicilio, tipo_doc, " +
+            "nro_doc, apellido, nombre, fecha_nac, cuil, telefono) " +
+            "values " +
+            "(isnull((select MAX(id_usuario)+1 from DD.Usuario_Cliente), 1), 1, 1, " +
+            cliente.numeroDocumento + ", '" + cliente.apellido + "', '" +
+            cliente.nombre + "', '" + fecha + "', '" +
+            cliente.cuil + "', '" + cliente.mail + "')";
+
+            SqlConnection conn = DBConexion.getConn();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            ;
+        }
+
+
+        internal static void eliminar(Cliente cliente)
+        {
+            String sql =
+            "delete from DD.Usuario_Cliente " +
+            "where id_usuario = " + cliente.idCliente;
+
+            SqlConnection conn = DBConexion.getConn();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

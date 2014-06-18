@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace FrbaCommerce.FrbaCommerce.AgregarRol
+namespace FrbaCommerce.AgregarRol
 {
     public partial class AltaCliente : Form
     {

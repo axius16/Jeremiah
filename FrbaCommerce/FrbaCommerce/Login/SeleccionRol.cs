@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace FrbaCommerce.FrbaCommerce.SeleccionRol
+namespace FrbaCommerce.SeleccionRol
 {
     public partial class AltaCliente : Form
     {

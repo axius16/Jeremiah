@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.ABM_Rol
+﻿namespace FrbaCommerce.ABM_Rol
 {
     partial class AltaRol
     {

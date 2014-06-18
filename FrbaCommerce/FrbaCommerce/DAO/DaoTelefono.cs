@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FrbaCommerce.FrbaCommerce.Modelo;
+using FrbaCommerce.Modelo;
 
-namespace FrbaCommerce.FrbaCommerce.DAO
+namespace FrbaCommerce.DAO
 {
     class DaoTelefono
     {

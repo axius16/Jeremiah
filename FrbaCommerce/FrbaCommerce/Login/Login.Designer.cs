@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.Login
+﻿namespace FrbaCommerce.Login
 {
     partial class AltaCliente
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 /**/
-namespace FrbaCommerce.FrbaCommerce.BuscarCliente
+namespace FrbaCommerce.BuscarCliente
 {
     public partial class Form1 : Form
     {

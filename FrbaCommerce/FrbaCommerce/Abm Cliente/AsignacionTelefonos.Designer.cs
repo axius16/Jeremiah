@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.Asignacion_telefonos
+﻿namespace FrbaCommerce.Asignacion_telefonos
 {
     partial class Form1
     {

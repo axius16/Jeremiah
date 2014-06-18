@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FrbaCommerce.Modelo;
 
-namespace FrbaCommerce.FrbaCommerce.Modelo
+namespace FrbaCommerce.Modelo
 {
     class Cliente : Usuario
     {

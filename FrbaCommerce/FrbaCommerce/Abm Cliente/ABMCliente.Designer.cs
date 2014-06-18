@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
+﻿namespace FrbaCommerce.Abm_Cliente
 {
     partial class ABMCliente
     {

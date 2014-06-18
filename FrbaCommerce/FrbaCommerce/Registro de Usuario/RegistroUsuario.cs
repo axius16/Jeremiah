@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace FrbaCommerce.FrbaCommerce.RegistroUsuario
+namespace FrbaCommerce.RegistroUsuario
 {
     public partial class AltaCliente : Form
     {

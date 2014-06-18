@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.BuscarCliente
+﻿namespace FrbaCommerce.BuscarCliente
 {
     partial class Form1
     {

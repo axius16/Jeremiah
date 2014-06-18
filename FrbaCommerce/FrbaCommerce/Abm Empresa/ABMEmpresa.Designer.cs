@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.Abm_Empresa
+﻿namespace FrbaCommerce.Abm_Empresa
 {
     partial class Form1
     {

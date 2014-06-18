@@ -6,28 +6,46 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using FrbaCommerce.Modelo;
 
 
-namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
+namespace FrbaCommerce.Abm_Cliente
 {
     public partial class AltaCliente : Form
     {
+        Cliente cliente;
+       
         public AltaCliente()
         {
             InitializeComponent();
-        } 
+            
+        }
+
+        public void setearCliente(Object unCliente)
+        {
+            if (unCliente != null)
+            {
+                this.cliente = (Cliente)unCliente;
+                this.l_apellido.Text = cliente.apellido;
+                this.l_nombre.Text = cliente.nombre;
+                this.l_mail.Text = cliente.mail;
+                this.l_numeroDocumento.Text = cliente.numeroDocumento.ToString();
+                this.l_fechaNacimiento.Text = cliente.fechaNacimiento.ToString();
+            }
+        }
+
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        
+
         private void Aceptar_Click(object sender, EventArgs e)
         {
-            Modelo.Cliente cliente = new Modelo.Cliente();
             Modelo.Direccion direccion = new Modelo.Direccion();
-
-            cliente.numeroDocumento = Convert.ToInt16(l_numeroDocumento.Text);
+            cliente.numeroDocumento = Convert.ToDecimal(l_numeroDocumento.Text);
             cliente.tipoDocumento = Convert.ToString(l_tipoDocumento.Text);
             cliente.nombre = Convert.ToString(l_nombre.Text);
             cliente.apellido = Convert.ToString(l_apellido.Text);
@@ -35,8 +53,15 @@ namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
             cliente.fechaNacimiento = Convert.ToDateTime(l_fechaNacimiento.Text);
             cliente.cuil = Convert.ToString(l_cuil.Text);
 
+            if (l_numero.Text == "")
+            {
+                direccion.numero = 0;
+            }
+            else {
+                direccion.numero = Convert.ToInt32(l_numero.Text);
+            }
+
             direccion.calle = Convert.ToString(l_calle.Text);
-            direccion.numero = Convert.ToInt32(l_numero.Text);
             direccion.piso = Convert.ToString(l_piso.Text);
             direccion.departamento = Convert.ToString(l_departamento.Text);
             direccion.ciudad = Convert.ToString(l_localidad.Text);
@@ -44,12 +69,15 @@ namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
 
             cliente.direccion = direccion;
 
-            DAO.DaoCliente.persistir(cliente);            
+            DAO.DaoCliente.persistir(cliente);
+            this.Dispose();
         }
 
         private void bEditarTelefonos_Click(object sender, EventArgs e)
         {
 
-        }    
+        }
+
+       
     }
 }

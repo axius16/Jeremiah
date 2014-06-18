@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.SeleccionRol
+﻿namespace FrbaCommerce.SeleccionRol
 {
     partial class AltaCliente
     {

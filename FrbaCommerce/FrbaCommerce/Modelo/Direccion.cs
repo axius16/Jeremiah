@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FrbaCommerce.FrbaCommerce.Modelo
+namespace FrbaCommerce.Modelo
 {
     class Direccion
     {

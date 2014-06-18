@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.AgregarRol
+﻿namespace FrbaCommerce.AgregarRol
 {
     partial class AltaCliente
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace FrbaCommerce.FrbaCommerce.Login
+namespace FrbaCommerce.Login
 {
     public partial class AltaCliente : Form
     {

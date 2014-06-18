@@ -1,4 +1,4 @@
-﻿namespace FrbaCommerce.FrbaCommerce.RegistroUsuario
+﻿namespace FrbaCommerce.RegistroUsuario
 {
     partial class AltaCliente
     {
