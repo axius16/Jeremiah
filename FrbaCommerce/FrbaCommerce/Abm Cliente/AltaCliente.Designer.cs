@@ -1,4 +1,5 @@
-﻿namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
+﻿using System.Windows.Forms;
+namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
 {
     partial class AltaCliente
     {
@@ -132,7 +133,6 @@
             // l_cuil
             // 
             this.l_cuil.BackColor = System.Drawing.SystemColors.Window;
-            this.l_cuil.Enabled = false;
             this.l_cuil.Location = new System.Drawing.Point(142, 188);
             this.l_cuil.Name = "l_cuil";
             this.l_cuil.Size = new System.Drawing.Size(231, 20);
@@ -150,7 +150,6 @@
             // l_fechaNacimiento
             // 
             this.l_fechaNacimiento.BackColor = System.Drawing.SystemColors.Window;
-            this.l_fechaNacimiento.Enabled = false;
             this.l_fechaNacimiento.Location = new System.Drawing.Point(142, 161);
             this.l_fechaNacimiento.Name = "l_fechaNacimiento";
             this.l_fechaNacimiento.Size = new System.Drawing.Size(231, 20);
@@ -293,6 +292,7 @@
             this.l_tipoDocumento.Name = "l_tipoDocumento";
             this.l_tipoDocumento.Size = new System.Drawing.Size(231, 21);
             this.l_tipoDocumento.TabIndex = 35;
+            this.l_tipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
             // 
             // l_apellido
             // 

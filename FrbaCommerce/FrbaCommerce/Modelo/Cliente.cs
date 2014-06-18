@@ -7,22 +7,23 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 {
     class Cliente : Usuario
     {
-        public UInt32 numeroDocumento { get; set; }
+        public Int32 idCliente { get; set; }
+        public decimal numeroDocumento { get; set; }
         public String tipoDocumento { get; set; }
         public String nombre { get; set; }
         public String apellido { get; set; }
         public String mail { get; set; }
         public DateTime fechaNacimiento { get; set; }
         public Usuario usuario { get; set; }
-        public UInt32 cuil { get; set; }
+        public String cuil { get; set; }
         public Direccion direccion { set; get; }
 
         public Cliente() { }
 
 
-        public Cliente(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos,
-                      List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, UInt32 numeroDocumento, String tipoDocumento, String nombre, String apellido,
-                      String mail, DateTime fechaNacimiento, UInt32 cuil, Direccion direccion, List<Publicacion> publicaciones,
+        public Cliente(String nombreUsuario, String password, Boolean habilitado, List<Int16> telefonos,
+                      List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, Int16 numeroDocumento, String tipoDocumento, String nombre, String apellido,
+                      String mail, DateTime fechaNacimiento, String cuil, Direccion direccion, List<Publicacion> publicaciones,
             List<Factura> facturasPagas)
         {
             this.nombreUsuario = nombreUsuario;

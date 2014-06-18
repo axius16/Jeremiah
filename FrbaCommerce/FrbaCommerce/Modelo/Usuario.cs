@@ -10,7 +10,7 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
         protected String nombreUsuario { get; set; }
         protected String password { get; set; }
         protected Boolean habilitado { get; set; }
-        protected List<UInt16> telefonos { get; set; }
+        protected List<Int16> telefonos { get; set; }
         protected List<Oferta> ofertas { get; set; }
         protected List<Pregunta> preguntasRealizadas { get; set; }
         protected List<Rol> roles { get; set; }
@@ -20,7 +20,7 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 
         public Usuario() { }
 
-        public Usuario(String nombreUsuario, String password, Boolean habilitado, List<UInt16> telefonos,
+        public Usuario(String nombreUsuario, String password, Boolean habilitado, List<Int16> telefonos,
                       List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario,
                         List<Publicacion> publicaciones, List<Factura> facturasPagas){
             this.nombreUsuario = nombreUsuario;

@@ -8,7 +8,7 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
     class Direccion
     {
         public String calle { set; get; }
-        public UInt32 numero { set; get; }
+        public Int32 numero { set; get; }
         public String piso { set; get; }
         public String departamento { set; get; }
         public String codigoPostal { set; get; }
@@ -16,7 +16,7 @@ namespace FrbaCommerce.FrbaCommerce.Modelo
 
         public Direccion(){}
 
-        public Direccion(String calle, UInt32 numero, String piso, String departamento, String codigoPostal, String ciudad) {
+        public Direccion(String calle, Int32 numero, String piso, String departamento, String codigoPostal, String ciudad) {
             this.calle = calle;
             this.numero = numero;
             this.piso = piso;

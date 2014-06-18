@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using FrbaCommerce;
 
 namespace FrbaCommerce
 {
@@ -13,10 +14,9 @@ namespace FrbaCommerce
         [STAThread]
         static void Main()
         {
-            System.Console.WriteLine("¡Hola Mundo!");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Abm_Cliente.Form1());
+            Application.Run(new FrbaCommerce.Abm_Cliente.ABMCliente());
         }
     }
 }

@@ -27,16 +27,16 @@ namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
             Modelo.Cliente cliente = new Modelo.Cliente();
             Modelo.Direccion direccion = new Modelo.Direccion();
 
-            cliente.numeroDocumento = Convert.ToUInt32(l_numeroDocumento.Text);
+            cliente.numeroDocumento = Convert.ToInt16(l_numeroDocumento.Text);
             cliente.tipoDocumento = Convert.ToString(l_tipoDocumento.Text);
             cliente.nombre = Convert.ToString(l_nombre.Text);
             cliente.apellido = Convert.ToString(l_apellido.Text);
             cliente.mail = Convert.ToString(l_mail.Text);
             cliente.fechaNacimiento = Convert.ToDateTime(l_fechaNacimiento.Text);
-            cliente.cuil = Convert.ToUInt32(l_cuil.Text);
+            cliente.cuil = Convert.ToString(l_cuil.Text);
 
             direccion.calle = Convert.ToString(l_calle.Text);
-            direccion.numero = Convert.ToUInt32(l_numero.Text);
+            direccion.numero = Convert.ToInt32(l_numero.Text);
             direccion.piso = Convert.ToString(l_piso.Text);
             direccion.departamento = Convert.ToString(l_departamento.Text);
             direccion.ciudad = Convert.ToString(l_localidad.Text);

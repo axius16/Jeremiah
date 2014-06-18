@@ -30,10 +30,10 @@ namespace FrbaCommerce.FrbaCommerce.Abm_Empresa
             cliente.nombre = Convert.ToString(l_razonSocial.Text);
             cliente.mail = Convert.ToString(l_mail.Text);
             cliente.fechaNacimiento = Convert.ToDateTime(l_fechaCreacion.Text);
-            cliente.cuil = Convert.ToUInt32(l_cuit.Text);
+            cliente.cuil = Convert.ToString(l_cuit.Text);
 
             direccion.calle = Convert.ToString(l_calle.Text);
-            direccion.numero = Convert.ToUInt32(l_numero.Text);
+            direccion.numero = Convert.ToInt32(l_numero.Text);
             direccion.piso = Convert.ToString(l_piso.Text);
             direccion.departamento = Convert.ToString(l_departamento.Text);
             direccion.ciudad = Convert.ToString(l_localidad.Text);

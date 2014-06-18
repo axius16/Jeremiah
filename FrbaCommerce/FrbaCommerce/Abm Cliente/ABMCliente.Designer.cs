@@ -1,6 +1,6 @@
 ﻿namespace FrbaCommerce.FrbaCommerce.Abm_Cliente
 {
-    partial class Form1
+    partial class ABMCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Limpiar = new System.Windows.Forms.Button();
             this.Buscar = new System.Windows.Forms.Button();
-            this.TipoDocumento = new System.Windows.Forms.ComboBox();
-            this.NumeroDocumento = new System.Windows.Forms.TextBox();
-            this.eMail = new System.Windows.Forms.TextBox();
+            this.l_TipoDocumento = new System.Windows.Forms.ComboBox();
+            this.l_NumeroDocumento = new System.Windows.Forms.TextBox();
+            this.l_eMail = new System.Windows.Forms.TextBox();
             this.l_Apellido = new System.Windows.Forms.TextBox();
             this.l_Nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,8 +45,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.t_clientes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t_clientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,9 +95,9 @@
             // 
             this.panel2.Controls.Add(this.Limpiar);
             this.panel2.Controls.Add(this.Buscar);
-            this.panel2.Controls.Add(this.TipoDocumento);
-            this.panel2.Controls.Add(this.NumeroDocumento);
-            this.panel2.Controls.Add(this.eMail);
+            this.panel2.Controls.Add(this.l_TipoDocumento);
+            this.panel2.Controls.Add(this.l_NumeroDocumento);
+            this.panel2.Controls.Add(this.l_eMail);
             this.panel2.Controls.Add(this.l_Apellido);
             this.panel2.Controls.Add(this.l_Nombre);
             this.panel2.Controls.Add(this.label5);
@@ -128,27 +130,27 @@
             this.Buscar.UseVisualStyleBackColor = true;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
-            // TipoDocumento
+            // l_TipoDocumento
             // 
-            this.TipoDocumento.FormattingEnabled = true;
-            this.TipoDocumento.Location = new System.Drawing.Point(364, 15);
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.Size = new System.Drawing.Size(160, 21);
-            this.TipoDocumento.TabIndex = 9;
+            this.l_TipoDocumento.FormattingEnabled = true;
+            this.l_TipoDocumento.Location = new System.Drawing.Point(364, 15);
+            this.l_TipoDocumento.Name = "l_TipoDocumento";
+            this.l_TipoDocumento.Size = new System.Drawing.Size(160, 21);
+            this.l_TipoDocumento.TabIndex = 9;
             // 
-            // NumeroDocumento
+            // l_NumeroDocumento
             // 
-            this.NumeroDocumento.Location = new System.Drawing.Point(364, 41);
-            this.NumeroDocumento.Name = "NumeroDocumento";
-            this.NumeroDocumento.Size = new System.Drawing.Size(160, 20);
-            this.NumeroDocumento.TabIndex = 8;
+            this.l_NumeroDocumento.Location = new System.Drawing.Point(364, 41);
+            this.l_NumeroDocumento.Name = "l_NumeroDocumento";
+            this.l_NumeroDocumento.Size = new System.Drawing.Size(160, 20);
+            this.l_NumeroDocumento.TabIndex = 8;
             // 
-            // eMail
+            // l_eMail
             // 
-            this.eMail.Location = new System.Drawing.Point(80, 67);
-            this.eMail.Name = "eMail";
-            this.eMail.Size = new System.Drawing.Size(160, 20);
-            this.eMail.TabIndex = 7;
+            this.l_eMail.Location = new System.Drawing.Point(80, 67);
+            this.l_eMail.Name = "l_eMail";
+            this.l_eMail.Size = new System.Drawing.Size(160, 20);
+            this.l_eMail.TabIndex = 7;
             // 
             // l_Apellido
             // 
@@ -209,19 +211,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo Documento";
             // 
-            // Form1
+            // t_clientes
+            // 
+            this.t_clientes.AllowUserToAddRows = false;
+            this.t_clientes.AllowUserToDeleteRows = false;
+            this.t_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.t_clientes.Location = new System.Drawing.Point(12, 128);
+            this.t_clientes.Name = "t_clientes";
+            this.t_clientes.ReadOnly = true;
+            this.t_clientes.Size = new System.Drawing.Size(554, 188);
+            this.t_clientes.TabIndex = 2;
+            // 
+            // ABMCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 379);
+            this.Controls.Add(this.t_clientes);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "ABMCliente";
             this.Text = "ABM Clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t_clientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,9 +248,9 @@
         private System.Windows.Forms.Button bModificacion;
         private System.Windows.Forms.Button bAlta;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox TipoDocumento;
-        private System.Windows.Forms.TextBox NumeroDocumento;
-        private System.Windows.Forms.TextBox eMail;
+        private System.Windows.Forms.ComboBox l_TipoDocumento;
+        private System.Windows.Forms.TextBox l_NumeroDocumento;
+        private System.Windows.Forms.TextBox l_eMail;
         private System.Windows.Forms.TextBox l_Apellido;
         private System.Windows.Forms.TextBox l_Nombre;
         private System.Windows.Forms.Label label5;
@@ -245,5 +260,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Limpiar;
         private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.DataGridView t_clientes;
     }
 }
