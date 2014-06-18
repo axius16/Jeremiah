@@ -135,6 +135,7 @@
     <Compile Include="FrbaCommerce\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaCommerce\Modelo\Telefono.cs" />
     <Compile Include="FrbaCommerce\Modelo\Direccion.cs" />
     <Compile Include="FrbaCommerce\Modelo\Empresa.cs" />
     <Compile Include="FrbaCommerce\Modelo\Factura.cs" />

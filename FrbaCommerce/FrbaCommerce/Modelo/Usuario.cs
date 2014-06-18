@@ -7,20 +7,20 @@ namespace FrbaCommerce.Modelo
 {
     class Usuario
     {
-        protected String nombreUsuario { get; set; }
-        protected String password { get; set; }
-        protected Boolean habilitado { get; set; }
-        protected List<Int16> telefonos { get; set; }
-        protected List<Oferta> ofertas { get; set; }
-        protected List<Pregunta> preguntasRealizadas { get; set; }
-        protected List<Rol> roles { get; set; }
-        protected String tipoUsuario { get; set; }
-        protected List<Publicacion> publicaciones { get; set; }
-        protected List<Factura> facturasPagas { get; set; }
+        public String nombreUsuario { get; set; }
+        public String password { get; set; }
+        public Boolean habilitado { get; set; }
+        public List<Telefono> telefonos { get; set; }
+        public List<Oferta> ofertas { get; set; }
+        public List<Pregunta> preguntasRealizadas { get; set; }
+        public List<Rol> roles { get; set; }
+        public String tipoUsuario { get; set; }
+        public List<Publicacion> publicaciones { get; set; }
+        public List<Factura> facturasPagas { get; set; }
 
         public Usuario() { }
 
-        public Usuario(String nombreUsuario, String password, Boolean habilitado, List<Int16> telefonos,
+        public Usuario(String nombreUsuario, String password, Boolean habilitado, List<Telefono> telefonos,
                       List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario,
                         List<Publicacion> publicaciones, List<Factura> facturasPagas){
             this.nombreUsuario = nombreUsuario;

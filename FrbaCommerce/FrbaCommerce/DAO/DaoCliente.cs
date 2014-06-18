@@ -73,6 +73,21 @@ namespace FrbaCommerce.DAO
             return getClientes(null, null, null, null, null);
         }
 
+        public List<Telefono> getTelefonos(Cliente cliente) {
+            List<Telefono> telefonos = new List<Telefono>();
+            
+            int i = 3;
+
+            while (3 <= i) {
+                Telefono unTelefono = new Telefono();
+                unTelefono.idCliente = cliente.idCliente;
+                unTelefono.numeroTelefono = (i * 123123).ToString();
+                telefonos.Add(unTelefono);
+            }
+
+            return telefonos;
+        }
+
         static public void persistir(Cliente cliente)
         {
             if (cliente.idCliente == 0)
@@ -91,15 +106,15 @@ namespace FrbaCommerce.DAO
 
             String sql =
             "update DD.Usuario_Cliente " +
-"set id_domicilio = '"+cliente.numeroDocumento+"', " +
-"tipo_doc = '"+cliente.tipoDocumento+"', " +
-"nro_doc = '"+cliente.numeroDocumento+"', " +
-"apellido = '"+cliente.apellido+"', " +
-"nombre = '"+cliente.nombre+"', " +
-"fecha_nac = '" + fecha + "', " +
-"cuil = '"+cliente.cuil+"', " +
-"telefono = '" + cliente.mail + "' " +
-"where id_usuario = "+cliente.idCliente;
+            "set id_domicilio = '"+cliente.numeroDocumento+"', " +
+            "tipo_doc = '"+cliente.tipoDocumento+"', " +
+            "nro_doc = '"+cliente.numeroDocumento+"', " +
+            "apellido = '"+cliente.apellido+"', " +
+            "nombre = '"+cliente.nombre+"', " +
+            "fecha_nac = '" + fecha + "', " +
+            "cuil = '"+cliente.cuil+"', " +
+            "telefono = '" + cliente.mail + "' " +
+            "where id_usuario = "+cliente.idCliente;
 
             SqlConnection conn = DBConexion.getConn();
             SqlCommand cmd = new SqlCommand();

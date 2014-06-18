@@ -22,7 +22,7 @@ namespace FrbaCommerce.Modelo
         public Cliente() { }
 
 
-        public Cliente(String nombreUsuario, String password, Boolean habilitado, List<Int16> telefonos,
+        public Cliente(String nombreUsuario, String password, Boolean habilitado, List<Telefono> telefonos,
                       List<Oferta> ofertas, List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, Int16 numeroDocumento, String tipoDocumento, String nombre, String apellido,
                       String mail, DateTime fechaNacimiento, String cuil, Direccion direccion, List<Publicacion> publicaciones,
             List<Factura> facturasPagas)

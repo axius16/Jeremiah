@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using FrbaCommerce.Modelo;
+using FrbaCommerce.Asignacion_Telefonos;
 
 
 namespace FrbaCommerce.Abm_Cliente
@@ -75,7 +76,9 @@ namespace FrbaCommerce.Abm_Cliente
 
         private void bEditarTelefonos_Click(object sender, EventArgs e)
         {
-
+            AsignacionTelefonos ventana = new AsignacionTelefonos();
+            ventana.ShowDialog();
+            
         }
 
        
