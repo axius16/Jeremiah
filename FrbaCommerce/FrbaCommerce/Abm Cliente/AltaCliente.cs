@@ -32,6 +32,8 @@ namespace FrbaCommerce.Abm_Cliente
                 this.l_mail.Text = cliente.mail;
                 this.l_numeroDocumento.Text = cliente.numeroDocumento.ToString();
                 this.l_fechaNacimiento.Text = cliente.fechaNacimiento.ToString();
+                this.l_telefonos.DataSource = cliente.telefonos;
+        
             }
         }
 
@@ -74,9 +76,10 @@ namespace FrbaCommerce.Abm_Cliente
             this.Dispose();
         }
 
-        private void bEditarTelefonos_Click(object sender, EventArgs e)
+        public void bEditarTelefonos_Click(object sender, EventArgs e)
         {
             AsignacionTelefonos ventana = new AsignacionTelefonos();
+            ventana.setearCliente(cliente);
             ventana.ShowDialog();
             
         }

@@ -37,8 +37,10 @@
             this.l_buscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.t_telefonos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t_telefonos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,11 +128,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Telefono";
             // 
+            // t_telefonos
+            // 
+            this.t_telefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.t_telefonos.Location = new System.Drawing.Point(12, 116);
+            this.t_telefonos.Name = "t_telefonos";
+            this.t_telefonos.Size = new System.Drawing.Size(311, 167);
+            this.t_telefonos.TabIndex = 2;
+            // 
             // AsignacionTelefonos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 378);
+            this.Controls.Add(this.t_telefonos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AsignacionTelefonos";
@@ -139,6 +150,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t_telefonos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bAsignar;
         private System.Windows.Forms.Label l_estadoAsignacion;
+        private System.Windows.Forms.DataGridView t_telefonos;
     }
 }

@@ -36,7 +36,7 @@ namespace FrbaCommerce.DAO
                 query = "SELECT * FROM DD.usuario_cliente " +
                 "where apellido like '%" + apellido + "%' " +
                 "and nombre like '%" + nombre + "%' " +
-                "and telefono like '%" + mail + "%'" +
+                "and mail like '%" + mail + "%'" +
                 " and nro_doc like '%" + dni + "%'" +
                 " and tipo_doc like '%" + tipoDoc + "%'";
             }
@@ -59,8 +59,8 @@ namespace FrbaCommerce.DAO
                     cliente.nombre = rs.GetString(rs.GetOrdinal("nombre"));
                     cliente.fechaNacimiento = rs.GetDateTime(rs.GetOrdinal("fecha_nac"));
                     cliente.cuil = rs.GetString(rs.GetOrdinal("cuil"));
-                    cliente.mail = rs.GetString(rs.GetOrdinal("telefono"));
-
+                    cliente.mail = rs.GetString(rs.GetOrdinal("mail"));
+                    cliente.telefonos = new DaoTelefono().getTelefonos(cliente);
                     clientes.Add(cliente);
                 }
 
@@ -113,7 +113,7 @@ namespace FrbaCommerce.DAO
             "nombre = '"+cliente.nombre+"', " +
             "fecha_nac = '" + fecha + "', " +
             "cuil = '"+cliente.cuil+"', " +
-            "telefono = '" + cliente.mail + "' " +
+            "mail = '" + cliente.mail + "' " +
             "where id_usuario = "+cliente.idCliente;
 
             SqlConnection conn = DBConexion.getConn();
