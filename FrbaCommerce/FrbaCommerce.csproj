@@ -123,6 +123,7 @@
     <Compile Include="FrbaCommerce\Connection\SQLUtils.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoTipoDocumento.cs" />
     <Compile Include="FrbaCommerce\Login\SeleccionRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +136,7 @@
     <Compile Include="FrbaCommerce\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaCommerce\Modelo\TipoDocumento.cs" />
     <Compile Include="FrbaCommerce\Modelo\Telefono.cs" />
     <Compile Include="FrbaCommerce\Modelo\Direccion.cs" />
     <Compile Include="FrbaCommerce\Modelo\Empresa.cs" />

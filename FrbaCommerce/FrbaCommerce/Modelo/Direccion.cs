@@ -8,7 +8,7 @@ namespace FrbaCommerce.Modelo
     class Direccion
     {
         public String calle { set; get; }
-        public Int32 numero { set; get; }
+        public decimal numero { set; get; }
         public String piso { set; get; }
         public String departamento { set; get; }
         public String codigoPostal { set; get; }

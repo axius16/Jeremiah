@@ -69,7 +69,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.bAceptar.Location = new System.Drawing.Point(291, 268);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(75, 23);
-            this.bAceptar.TabIndex = 14;
+            this.bAceptar.TabIndex = 16;
             this.bAceptar.Text = "Aceptar";
             this.bAceptar.UseVisualStyleBackColor = true;
             this.bAceptar.Click += new System.EventHandler(this.Aceptar_Click);
@@ -117,7 +117,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.bEditarTelefonos.Location = new System.Drawing.Point(403, 211);
             this.bEditarTelefonos.Name = "bEditarTelefonos";
             this.bEditarTelefonos.Size = new System.Drawing.Size(75, 23);
-            this.bEditarTelefonos.TabIndex = 53;
+            this.bEditarTelefonos.TabIndex = 15;
             this.bEditarTelefonos.Text = "Editar";
             this.bEditarTelefonos.UseVisualStyleBackColor = true;
             this.bEditarTelefonos.Click += new System.EventHandler(this.bEditarTelefonos_Click);
@@ -128,7 +128,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_telefonos.Location = new System.Drawing.Point(484, 191);
             this.l_telefonos.Name = "l_telefonos";
             this.l_telefonos.Size = new System.Drawing.Size(231, 43);
-            this.l_telefonos.TabIndex = 52;
+            this.l_telefonos.TabIndex = 14;
             // 
             // l_cuil
             // 
@@ -136,7 +136,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_cuil.Location = new System.Drawing.Point(142, 188);
             this.l_cuil.Name = "l_cuil";
             this.l_cuil.Size = new System.Drawing.Size(231, 20);
-            this.l_cuil.TabIndex = 51;
+            this.l_cuil.TabIndex = 7;
             // 
             // label13
             // 
@@ -153,7 +153,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_fechaNacimiento.Location = new System.Drawing.Point(142, 161);
             this.l_fechaNacimiento.Name = "l_fechaNacimiento";
             this.l_fechaNacimiento.Size = new System.Drawing.Size(231, 20);
-            this.l_fechaNacimiento.TabIndex = 51;
+            this.l_fechaNacimiento.TabIndex = 6;
             // 
             // label12
             // 
@@ -169,7 +169,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_codigoPostal.Location = new System.Drawing.Point(484, 135);
             this.l_codigoPostal.Name = "l_codigoPostal";
             this.l_codigoPostal.Size = new System.Drawing.Size(231, 20);
-            this.l_codigoPostal.TabIndex = 49;
+            this.l_codigoPostal.TabIndex = 12;
             // 
             // label11
             // 
@@ -185,7 +185,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_departamento.Location = new System.Drawing.Point(484, 109);
             this.l_departamento.Name = "l_departamento";
             this.l_departamento.Size = new System.Drawing.Size(231, 20);
-            this.l_departamento.TabIndex = 47;
+            this.l_departamento.TabIndex = 11;
             // 
             // label10
             // 
@@ -201,7 +201,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_localidad.Location = new System.Drawing.Point(484, 161);
             this.l_localidad.Name = "l_localidad";
             this.l_localidad.Size = new System.Drawing.Size(231, 20);
-            this.l_localidad.TabIndex = 45;
+            this.l_localidad.TabIndex = 13;
             // 
             // label9
             // 
@@ -217,7 +217,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_piso.Location = new System.Drawing.Point(484, 83);
             this.l_piso.Name = "l_piso";
             this.l_piso.Size = new System.Drawing.Size(231, 20);
-            this.l_piso.TabIndex = 43;
+            this.l_piso.TabIndex = 10;
             // 
             // label8
             // 
@@ -233,7 +233,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_numero.Location = new System.Drawing.Point(484, 57);
             this.l_numero.Name = "l_numero";
             this.l_numero.Size = new System.Drawing.Size(231, 20);
-            this.l_numero.TabIndex = 41;
+            this.l_numero.TabIndex = 9;
             // 
             // label14
             // 
@@ -249,7 +249,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_calle.Location = new System.Drawing.Point(484, 31);
             this.l_calle.Name = "l_calle";
             this.l_calle.Size = new System.Drawing.Size(231, 20);
-            this.l_calle.TabIndex = 41;
+            this.l_calle.TabIndex = 8;
             // 
             // label7
             // 
@@ -274,7 +274,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_mail.Location = new System.Drawing.Point(142, 135);
             this.l_mail.Name = "l_mail";
             this.l_mail.Size = new System.Drawing.Size(231, 20);
-            this.l_mail.TabIndex = 37;
+            this.l_mail.TabIndex = 5;
             // 
             // label5
             // 
@@ -287,19 +287,19 @@ namespace FrbaCommerce.Abm_Cliente
             // 
             // l_tipoDocumento
             // 
+            this.l_tipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.l_tipoDocumento.FormattingEnabled = true;
             this.l_tipoDocumento.Location = new System.Drawing.Point(142, 109);
             this.l_tipoDocumento.Name = "l_tipoDocumento";
             this.l_tipoDocumento.Size = new System.Drawing.Size(231, 21);
-            this.l_tipoDocumento.TabIndex = 35;
-            this.l_tipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.l_tipoDocumento.TabIndex = 4;
             // 
             // l_apellido
             // 
             this.l_apellido.Location = new System.Drawing.Point(142, 57);
             this.l_apellido.Name = "l_apellido";
             this.l_apellido.Size = new System.Drawing.Size(231, 20);
-            this.l_apellido.TabIndex = 13;
+            this.l_apellido.TabIndex = 2;
             // 
             // label4
             // 
@@ -324,7 +324,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_numeroDocumento.Location = new System.Drawing.Point(142, 83);
             this.l_numeroDocumento.Name = "l_numeroDocumento";
             this.l_numeroDocumento.Size = new System.Drawing.Size(231, 20);
-            this.l_numeroDocumento.TabIndex = 33;
+            this.l_numeroDocumento.TabIndex = 3;
             // 
             // label3
             // 
@@ -340,7 +340,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_nombre.Location = new System.Drawing.Point(142, 31);
             this.l_nombre.Name = "l_nombre";
             this.l_nombre.Size = new System.Drawing.Size(231, 20);
-            this.l_nombre.TabIndex = 11;
+            this.l_nombre.TabIndex = 1;
             // 
             // label2
             // 
@@ -356,7 +356,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.bCancelar.Location = new System.Drawing.Point(396, 268);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(75, 23);
-            this.bCancelar.TabIndex = 16;
+            this.bCancelar.TabIndex = 17;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bCancelar.UseVisualStyleBackColor = true;

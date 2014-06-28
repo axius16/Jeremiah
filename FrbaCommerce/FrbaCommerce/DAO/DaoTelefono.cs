@@ -8,9 +8,10 @@ namespace FrbaCommerce.DAO
 {
     class DaoTelefono
     {
-        public void asignarTelefono(Cliente cliente, Int16 numeroTelefono) {
+        public void asignarTelefono(Cliente cliente, Decimal numeroTelefono)
+        {
             
-            Telefono telefono = new Telefono(cliente.idCliente, numeroTelefono.ToString());
+            Telefono telefono = new Telefono(cliente.idCliente, numeroTelefono);
 
             String sql =
             "insert into DD.Telefono (id_cliente, numero_telefono)" +
@@ -33,7 +34,7 @@ namespace FrbaCommerce.DAO
             String sql =
             "delete from DD.Telefono " +
             "where id_cliente = " + cliente.idCliente +
-            "and telefono = " + telefono.numeroTelefono;
+            "and numero_telefono = " + telefono.numeroTelefono;
 
             SqlConnection conn = DBConexion.getConn();
             SqlCommand cmd = new SqlCommand();
@@ -48,12 +49,16 @@ namespace FrbaCommerce.DAO
             ;
         }
 
-
-        public bool validarTelefono(Int16 numeroTelefono) {
+        //
+        // Devuelve true si el telefono se encuentra disponible
+        // Devuelve false si el telefono esta en uno por un cliente
+        // 
+        //
+        public bool validarTelefono(Decimal numeroTelefono) {
 
             bool telefonoDisponible = true;
             String query =
-            "select 1 from DD.Telefono where telefono = " +
+            "select 1 from DD.Telefono where numero_telefono = " +
             numeroTelefono;
 
             SqlConnection conn = DBConexion.getConn();
@@ -78,7 +83,7 @@ namespace FrbaCommerce.DAO
         {
             List<Telefono> telefonosCliente = new List<Telefono>();
 
-            String query = "select * from DD.Telefono" +
+            String query = "select * from DD.Telefono " +
                 "where id_cliente = " + unCliente.idCliente;
                 
             SqlConnection conn = DBConexion.getConn();
@@ -92,7 +97,7 @@ namespace FrbaCommerce.DAO
                 {
                     Telefono unTelefono = new Telefono();
                     unTelefono.idCliente = unCliente.idCliente;
-                    unTelefono.numeroTelefono = (rs.GetInt32(rs.GetOrdinal("numero_telefono"))).ToString();
+                    unTelefono.numeroTelefono = rs.GetDecimal(rs.GetOrdinal("numero_telefono"));
                     telefonosCliente.Add(unTelefono);
                 }
 

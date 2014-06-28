@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using FrbaCommerce.Modelo;
 using FrbaCommerce.Asignacion_Telefonos;
+using FrbaCommerce.DAO;
 
 
 namespace FrbaCommerce.Abm_Cliente
@@ -19,7 +20,9 @@ namespace FrbaCommerce.Abm_Cliente
         public AltaCliente()
         {
             InitializeComponent();
-            
+            this.l_tipoDocumento.DataSource = DaoTipoDocumento.getAll();
+            this.l_tipoDocumento.DisplayMember = "descTipoDocumento";
+            this.l_tipoDocumento.ValueMember = "idTipoDocumento";
         }
 
         public void setearCliente(Object unCliente)
@@ -31,9 +34,22 @@ namespace FrbaCommerce.Abm_Cliente
                 this.l_nombre.Text = cliente.nombre;
                 this.l_mail.Text = cliente.mail;
                 this.l_numeroDocumento.Text = cliente.numeroDocumento.ToString();
-                this.l_fechaNacimiento.Text = cliente.fechaNacimiento.ToString();
+                this.l_fechaNacimiento.Text = cliente.fechaNacimiento.ToString("d");
                 this.l_telefonos.DataSource = cliente.telefonos;
-        
+                this.l_cuil.Text = cliente.cuil;
+                this.l_tipoDocumento.Text = cliente.tipoDocumento.descTipoDocumento;
+                this.l_calle.Text = cliente.direccion.calle;
+                this.l_localidad.Text = cliente.direccion.ciudad;
+                this.l_codigoPostal.Text = cliente.direccion.codigoPostal;
+                this.l_departamento.Text = cliente.direccion.departamento;
+                Decimal aux = cliente.direccion.numero;
+                String miNumero = "";
+                if (aux != 0)
+                {
+                    miNumero = cliente.direccion.numero.ToString();
+                }                
+                this.l_numero.Text = miNumero;
+                this.l_piso.Text = cliente.direccion.piso;
             }
         }
 
@@ -49,7 +65,7 @@ namespace FrbaCommerce.Abm_Cliente
         {
             Modelo.Direccion direccion = new Modelo.Direccion();
             cliente.numeroDocumento = Convert.ToDecimal(l_numeroDocumento.Text);
-            cliente.tipoDocumento = Convert.ToString(l_tipoDocumento.Text);
+            cliente.tipoDocumento = (TipoDocumento)l_tipoDocumento.SelectedItem;
             cliente.nombre = Convert.ToString(l_nombre.Text);
             cliente.apellido = Convert.ToString(l_apellido.Text);
             cliente.mail = Convert.ToString(l_mail.Text);
@@ -81,9 +97,10 @@ namespace FrbaCommerce.Abm_Cliente
             AsignacionTelefonos ventana = new AsignacionTelefonos();
             ventana.setearCliente(cliente);
             ventana.ShowDialog();
-            
+            this.l_telefonos.DataSource = null;
+            cliente.telefonos = new DaoTelefono().getTelefonos(cliente);
+            this.l_telefonos.DataSource = cliente.telefonos;
+            this.l_telefonos.Refresh();
         }
-
-       
     }
 }

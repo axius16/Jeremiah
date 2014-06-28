@@ -19,13 +19,13 @@ namespace FrbaCommerce.DAO
            return null;
         }
 
-        static public List<Cliente> getClientes(String apellido, String nombre, String dni, String tipoDoc, String mail) {
+        static public List<Cliente> getClientes(String apellido, String nombre, String dni, TipoDocumento tipoDoc, String mail) {
             List<Cliente> clientes = new List<Cliente>();
 
             String query = "";
             // apellido nombre dni tipoDOc mail
             if ((apellido == null || apellido == "") && (nombre == null || nombre == "") &&
-                (dni == null || dni == "") && (tipoDoc == null || tipoDoc == "")
+                (dni == null || dni == "") && (tipoDoc == null || tipoDoc.idTipoDocumento == 0)
                 && (mail == null || mail == ""))
             {
                 query = "select * from DD.Usuario_Cliente";
@@ -37,10 +37,12 @@ namespace FrbaCommerce.DAO
                 "where apellido like '%" + apellido + "%' " +
                 "and nombre like '%" + nombre + "%' " +
                 "and mail like '%" + mail + "%'" +
-                " and nro_doc like '%" + dni + "%'" +
-                " and tipo_doc like '%" + tipoDoc + "%'";
-            }
-            
+                " and nro_doc like '%" + dni + "%'";
+
+                if (tipoDoc.idTipoDocumento != 0) {
+                    query = query + " and tipo_doc like '%" + tipoDoc.idTipoDocumento + "%'";
+                }
+            }            
 
             SqlConnection conn = DBConexion.getConn();
             SqlCommand sql = new SqlCommand(query, conn);
@@ -48,12 +50,12 @@ namespace FrbaCommerce.DAO
 
             while (rs.Read())
             {
-
                 if (!rs.IsDBNull(0))
                 {
                     Cliente cliente = new Cliente();
+                    Direccion dir = new Direccion();
                     cliente.idCliente = rs.GetInt32(rs.GetOrdinal("id_usuario"));
-                    cliente.tipoDocumento = (rs.GetInt16(rs.GetOrdinal("tipo_doc"))).ToString();
+                    cliente.tipoDocumento =  new TipoDocumento(rs.GetInt16(rs.GetOrdinal("tipo_doc")));
                     cliente.numeroDocumento = rs.GetDecimal(rs.GetOrdinal("nro_doc"));
                     cliente.apellido = rs.GetString(rs.GetOrdinal("apellido"));
                     cliente.nombre = rs.GetString(rs.GetOrdinal("nombre"));
@@ -61,6 +63,13 @@ namespace FrbaCommerce.DAO
                     cliente.cuil = rs.GetString(rs.GetOrdinal("cuil"));
                     cliente.mail = rs.GetString(rs.GetOrdinal("mail"));
                     cliente.telefonos = new DaoTelefono().getTelefonos(cliente);
+                    dir.calle = rs.GetString(rs.GetOrdinal("calle"));
+                    dir.numero = rs.GetDecimal(rs.GetOrdinal("nro_calle"));
+                    dir.piso = rs.GetString(rs.GetOrdinal("piso"));
+                    dir.departamento = rs.GetString(rs.GetOrdinal("depto"));
+                    dir.codigoPostal= rs.GetString(rs.GetOrdinal("codigo_postal"));
+                    dir.ciudad = rs.GetString(rs.GetOrdinal("ciudad"));
+                    cliente.direccion = dir;
                     clientes.Add(cliente);
                 }
 
@@ -71,21 +80,6 @@ namespace FrbaCommerce.DAO
 
         static public List<Cliente> getAllClientes() {
             return getClientes(null, null, null, null, null);
-        }
-
-        public List<Telefono> getTelefonos(Cliente cliente) {
-            List<Telefono> telefonos = new List<Telefono>();
-            
-            int i = 3;
-
-            while (3 <= i) {
-                Telefono unTelefono = new Telefono();
-                unTelefono.idCliente = cliente.idCliente;
-                unTelefono.numeroTelefono = (i * 123123).ToString();
-                telefonos.Add(unTelefono);
-            }
-
-            return telefonos;
         }
 
         static public void persistir(Cliente cliente)
@@ -107,13 +101,19 @@ namespace FrbaCommerce.DAO
             String sql =
             "update DD.Usuario_Cliente " +
             "set id_domicilio = '"+cliente.numeroDocumento+"', " +
-            "tipo_doc = '"+cliente.tipoDocumento+"', " +
+            "tipo_doc = '"+cliente.tipoDocumento.idTipoDocumento+"', " +
             "nro_doc = '"+cliente.numeroDocumento+"', " +
             "apellido = '"+cliente.apellido+"', " +
             "nombre = '"+cliente.nombre+"', " +
             "fecha_nac = '" + fecha + "', " +
             "cuil = '"+cliente.cuil+"', " +
-            "mail = '" + cliente.mail + "' " +
+            "mail = '" + cliente.mail + "', " +
+            "calle = '" + cliente.direccion.calle + "', " +
+            "nro_calle = '" + cliente.direccion.numero + "', " +
+            "piso = '" + cliente.direccion.piso + "', " +
+            "depto = '" + cliente.direccion.departamento + "', " +
+            "codigo_postal = '" + cliente.direccion.codigoPostal + "', " +
+            "ciudad = '" + cliente.direccion.ciudad + "' " +
             "where id_usuario = "+cliente.idCliente;
 
             SqlConnection conn = DBConexion.getConn();
@@ -126,19 +126,40 @@ namespace FrbaCommerce.DAO
             ;
         }
 
+        private static Int32 getProximoIdCliente() {
+            String query = "select isnull((select MAX(id_usuario)+1), 1) as id_cliente from DD.Usuario_Cliente";
+            SqlConnection conn = DBConexion.getConn();
+            SqlCommand sql = new SqlCommand(query, conn);
+            SqlDataReader rs = sql.ExecuteReader();
+            Int32 idCliente = 0;
+            while (rs.Read())
+            {
+                if (!rs.IsDBNull(0))
+                {
+                    idCliente = rs.GetInt32(rs.GetOrdinal("id_cliente"));
+                }
+
+            }
+            conn.Close();
+            return idCliente;
+        }
+
         private static void insertCliente(Cliente cliente)
         {
             String fecha = cliente.fechaNacimiento.ToString("d");
-
+            Int32 nuevoIdCliente = getProximoIdCliente();
             String sql =
             "insert into DD.Usuario_Cliente " +
             "(id_usuario, id_domicilio, tipo_doc, " +
-            "nro_doc, apellido, nombre, fecha_nac, cuil, telefono) " +
+            "nro_doc, apellido, nombre, fecha_nac, cuil, mail) " +
             "values " +
-            "(isnull((select MAX(id_usuario)+1 from DD.Usuario_Cliente), 1), 1, 1, " +
+            nuevoIdCliente + ", 1, 1, " +
             cliente.numeroDocumento + ", '" + cliente.apellido + "', '" +
             cliente.nombre + "', '" + fecha + "', '" +
             cliente.cuil + "', '" + cliente.mail + "')";
+
+            DaoTelefono daoTel = new DaoTelefono();
+            //persistir telefonos
 
             SqlConnection conn = DBConexion.getConn();
             SqlCommand cmd = new SqlCommand();
@@ -147,7 +168,6 @@ namespace FrbaCommerce.DAO
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
             conn.Close();
-            ;
         }
 
 

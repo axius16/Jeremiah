@@ -57,7 +57,7 @@
             this.bDesasignar.Location = new System.Drawing.Point(22, 0);
             this.bDesasignar.Name = "bDesasignar";
             this.bDesasignar.Size = new System.Drawing.Size(75, 23);
-            this.bDesasignar.TabIndex = 0;
+            this.bDesasignar.TabIndex = 3;
             this.bDesasignar.Text = "Desasignar";
             this.bDesasignar.UseVisualStyleBackColor = true;
             this.bDesasignar.Click += new System.EventHandler(this.bDesasignar_Click);
@@ -67,7 +67,7 @@
             this.bCerrar.Location = new System.Drawing.Point(118, 52);
             this.bCerrar.Name = "bCerrar";
             this.bCerrar.Size = new System.Drawing.Size(75, 23);
-            this.bCerrar.TabIndex = 1;
+            this.bCerrar.TabIndex = 4;
             this.bCerrar.Text = "Cerrar";
             this.bCerrar.UseVisualStyleBackColor = true;
             this.bCerrar.Click += new System.EventHandler(this.bCerrar_Click);
@@ -98,7 +98,7 @@
             this.bAsignar.Location = new System.Drawing.Point(74, 41);
             this.bAsignar.Name = "bAsignar";
             this.bAsignar.Size = new System.Drawing.Size(84, 23);
-            this.bAsignar.TabIndex = 10;
+            this.bAsignar.TabIndex = 2;
             this.bAsignar.Text = "Asignar";
             this.bAsignar.UseVisualStyleBackColor = true;
             this.bAsignar.Click += new System.EventHandler(this.bAsignar_Click);
@@ -108,7 +108,7 @@
             this.l_buscar.Location = new System.Drawing.Point(74, 15);
             this.l_buscar.Name = "l_buscar";
             this.l_buscar.Size = new System.Drawing.Size(214, 20);
-            this.l_buscar.TabIndex = 5;
+            this.l_buscar.TabIndex = 1;
             // 
             // label3
             // 
@@ -135,6 +135,7 @@
             this.t_telefonos.Name = "t_telefonos";
             this.t_telefonos.Size = new System.Drawing.Size(311, 167);
             this.t_telefonos.TabIndex = 2;
+            this.t_telefonos.TabStop = false;
             // 
             // AsignacionTelefonos
             // 

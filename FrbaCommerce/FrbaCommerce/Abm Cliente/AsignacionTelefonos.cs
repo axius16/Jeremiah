@@ -27,13 +27,22 @@ namespace FrbaCommerce.Asignacion_Telefonos
         private void bAsignar_Click(object sender, EventArgs e)
         {
             DaoTelefono dao = new DaoTelefono();
-            Int16 i = l_buscar.ToString();
-            dao.validarTelefono();
+            Decimal numeroTelefono = Decimal.Parse(l_buscar.Text);
             
+            bool telefonoDisponible = dao.validarTelefono(numeroTelefono);
 
-            //validar si el telefono existe
-            //si existe, mostrar el error en la label
-            //si no exise, asignar a mi cliente
+            if (!telefonoDisponible) {
+                l_estadoAsignacion.Text = "Telefono en uso!";
+                return;
+            }
+            dao.asignarTelefono(this.cliente, numeroTelefono);
+            l_estadoAsignacion.Text = "";
+            actualizarTablaTelefonos();
+        }
+
+        private void actualizarTablaTelefonos()
+        {
+            SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.cliente.telefonos);
         }
 
         private void bDesasignar_Click(object sender, EventArgs e)
@@ -45,7 +54,7 @@ namespace FrbaCommerce.Asignacion_Telefonos
             }
             DaoTelefono dao = new DaoTelefono();
             dao.desasignarTelefono(cliente, telefono);
-            SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.cliente.telefonos);
+            this.actualizarTablaTelefonos();
         }
 
         private void bCerrar_Click(object sender, EventArgs e)
@@ -58,7 +67,8 @@ namespace FrbaCommerce.Asignacion_Telefonos
             if (unCliente != null)
             {
                 this.cliente = (Cliente)unCliente;
-                SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.cliente.telefonos);
+                this.l_estadoAsignacion.Text = "";
+                this.actualizarTablaTelefonos();
             }
         }
     }

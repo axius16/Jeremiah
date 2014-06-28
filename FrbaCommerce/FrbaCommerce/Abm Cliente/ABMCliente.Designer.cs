@@ -66,7 +66,7 @@
             this.bBaja.Location = new System.Drawing.Point(345, 3);
             this.bBaja.Name = "bBaja";
             this.bBaja.Size = new System.Drawing.Size(75, 23);
-            this.bBaja.TabIndex = 2;
+            this.bBaja.TabIndex = 11;
             this.bBaja.Text = "Eliminar";
             this.bBaja.UseVisualStyleBackColor = true;
             this.bBaja.Click += new System.EventHandler(this.bBaja_Click);
@@ -76,17 +76,17 @@
             this.bAlta.Location = new System.Drawing.Point(135, 3);
             this.bAlta.Name = "bAlta";
             this.bAlta.Size = new System.Drawing.Size(75, 23);
-            this.bAlta.TabIndex = 0;
+            this.bAlta.TabIndex = 9;
             this.bAlta.Text = "Ingresar";
             this.bAlta.UseVisualStyleBackColor = true;
-            this.bAlta.Click += new System.EventHandler(this.button1_Click);
+            this.bAlta.Click += new System.EventHandler(this.bAlta_Click);
             // 
             // bModificacion
             // 
             this.bModificacion.Location = new System.Drawing.Point(240, 3);
             this.bModificacion.Name = "bModificacion";
             this.bModificacion.Size = new System.Drawing.Size(75, 23);
-            this.bModificacion.TabIndex = 1;
+            this.bModificacion.TabIndex = 10;
             this.bModificacion.Text = "Modificar";
             this.bModificacion.UseVisualStyleBackColor = true;
             this.bModificacion.Click += new System.EventHandler(this.bModificacion_Click);
@@ -115,7 +115,7 @@
             this.Limpiar.Location = new System.Drawing.Point(364, 70);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(75, 23);
-            this.Limpiar.TabIndex = 11;
+            this.Limpiar.TabIndex = 7;
             this.Limpiar.Text = "Limpiar";
             this.Limpiar.UseVisualStyleBackColor = true;
             this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
@@ -125,7 +125,7 @@
             this.Buscar.Location = new System.Drawing.Point(283, 70);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(75, 23);
-            this.Buscar.TabIndex = 10;
+            this.Buscar.TabIndex = 6;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = true;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
@@ -136,35 +136,35 @@
             this.l_TipoDocumento.Location = new System.Drawing.Point(364, 15);
             this.l_TipoDocumento.Name = "l_TipoDocumento";
             this.l_TipoDocumento.Size = new System.Drawing.Size(160, 21);
-            this.l_TipoDocumento.TabIndex = 9;
+            this.l_TipoDocumento.TabIndex = 4;
             // 
             // l_NumeroDocumento
             // 
             this.l_NumeroDocumento.Location = new System.Drawing.Point(364, 41);
             this.l_NumeroDocumento.Name = "l_NumeroDocumento";
             this.l_NumeroDocumento.Size = new System.Drawing.Size(160, 20);
-            this.l_NumeroDocumento.TabIndex = 8;
+            this.l_NumeroDocumento.TabIndex = 5;
             // 
             // l_eMail
             // 
             this.l_eMail.Location = new System.Drawing.Point(80, 67);
             this.l_eMail.Name = "l_eMail";
             this.l_eMail.Size = new System.Drawing.Size(160, 20);
-            this.l_eMail.TabIndex = 7;
+            this.l_eMail.TabIndex = 3;
             // 
             // l_Apellido
             // 
             this.l_Apellido.Location = new System.Drawing.Point(80, 41);
             this.l_Apellido.Name = "l_Apellido";
             this.l_Apellido.Size = new System.Drawing.Size(160, 20);
-            this.l_Apellido.TabIndex = 6;
+            this.l_Apellido.TabIndex = 2;
             // 
             // l_Nombre
             // 
             this.l_Nombre.Location = new System.Drawing.Point(80, 15);
             this.l_Nombre.Name = "l_Nombre";
             this.l_Nombre.Size = new System.Drawing.Size(160, 20);
-            this.l_Nombre.TabIndex = 5;
+            this.l_Nombre.TabIndex = 1;
             // 
             // label5
             // 
@@ -220,7 +220,8 @@
             this.t_clientes.Name = "t_clientes";
             this.t_clientes.ReadOnly = true;
             this.t_clientes.Size = new System.Drawing.Size(554, 188);
-            this.t_clientes.TabIndex = 2;
+            this.t_clientes.TabIndex = 8;
+            this.t_clientes.TabStop = false;
             // 
             // ABMCliente
             // 
