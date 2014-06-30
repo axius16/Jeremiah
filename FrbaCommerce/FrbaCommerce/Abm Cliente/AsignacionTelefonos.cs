@@ -8,12 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using FrbaCommerce.Modelo;
 using FrbaCommerce.DAO;
-/**/
+
 namespace FrbaCommerce.Asignacion_Telefonos
 {
     public partial class AsignacionTelefonos : Form
     {
         Cliente cliente;
+        Empresa empresa;
+        
         public AsignacionTelefonos()
         {
             InitializeComponent();
@@ -35,14 +37,29 @@ namespace FrbaCommerce.Asignacion_Telefonos
                 l_estadoAsignacion.Text = "Telefono en uso!";
                 return;
             }
-            dao.asignarTelefono(this.cliente, numeroTelefono);
+            if (this.cliente == null)
+            {
+                dao.asignarTelefono(this.empresa, numeroTelefono);
+            }
+            else
+            {
+                dao.asignarTelefono(this.cliente, numeroTelefono);
+            }
             l_estadoAsignacion.Text = "";
             actualizarTablaTelefonos();
         }
 
         private void actualizarTablaTelefonos()
         {
-            SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.cliente.telefonos);
+            if (cliente == null)
+            {
+                SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.empresa.telefonos);
+            }
+            else
+            {
+                SQLUtils.SQLUtils.cargarTabla(this.t_telefonos, this.cliente.telefonos);
+
+            }
         }
 
         private void bDesasignar_Click(object sender, EventArgs e)
@@ -53,7 +70,14 @@ namespace FrbaCommerce.Asignacion_Telefonos
                 telefono = row.DataBoundItem as Telefono;
             }
             DaoTelefono dao = new DaoTelefono();
-            dao.desasignarTelefono(cliente, telefono);
+            if (cliente == null)
+            {
+                dao.desasignarTelefono(empresa, telefono);
+            }
+            else
+            {
+                dao.desasignarTelefono(cliente, telefono);
+            }
             this.actualizarTablaTelefonos();
         }
 
@@ -66,7 +90,18 @@ namespace FrbaCommerce.Asignacion_Telefonos
         {
             if (unCliente != null)
             {
+                this.empresa = null;
                 this.cliente = (Cliente)unCliente;
+                this.l_estadoAsignacion.Text = "";
+                this.actualizarTablaTelefonos();
+            }
+        }
+        public void setearEmpresa(Object unaEmpresa)
+        {
+            if (unaEmpresa != null)
+            {
+                this.cliente = null;
+                this.empresa = (Empresa)unaEmpresa;
                 this.l_estadoAsignacion.Text = "";
                 this.actualizarTablaTelefonos();
             }

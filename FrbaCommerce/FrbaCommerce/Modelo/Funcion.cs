@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class Funcion
+    public class Funcion
     {
         Int16 id { get; set; }
         String descripcion { get; set; }

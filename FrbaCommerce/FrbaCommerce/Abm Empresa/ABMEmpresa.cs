@@ -6,100 +6,72 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using FrbaCommerce.DAO;
+using FrbaCommerce.Abm_Empresa;
+using FrbaCommerce.Modelo;
 
 namespace FrbaCommerce.Abm_Empresa
 {
-    public partial class Form1 : Form
+    public partial class AbmEmpresa : Form
     {
-
-            
-        
-
-        public Form1()
+        public AbmEmpresa()
         {
             InitializeComponent();
                       
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void AbmEmpresa_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bAlta_Click(object sender, EventArgs e)
         {
-            //nueva ventana de insert
-            System.Console.WriteLine("Clic en Insert");
+            AltaEmpresa ventana = new AltaEmpresa();
+            ventana.ShowDialog();
+            this.Limpiar_Click(sender, e);
         }
 
         private void bModificacion_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine("Clic en Modificar");
+            Empresa empresa = new Empresa();
+            foreach (DataGridViewRow row in this.tb_empresas.SelectedRows)
+            {
+                empresa = row.DataBoundItem as Empresa;
+            }
+            if (empresa.idEmpresa == 0)
+            {
+                MessageBox.Show("Por favor seleccione una Empresa.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            AltaEmpresa ventana = new AltaEmpresa();
+            ventana.setearEmpresa(empresa);
+            ventana.ShowDialog();
+            this.Buscar_Click(sender, e);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
         private void bBaja_Click(object sender, EventArgs e)
         {
             System.Console.WriteLine("Clic en Eliminar");
         }
 
-        private void bBuscar_Click(object sender, EventArgs e)
-        {
-            String textoBusqueda = l_RazonSocial.Text;
-            System.Console.WriteLine("Clic en Buscar");
-            System.Console.WriteLine("Buscar: {0}", textoBusqueda);
-            this.cargarDatosEntabla();
-            
-        }
-
-        static DataTable getTable()
-        {
-            //
-            // Here we create a DataTable with four columns.
-            //
-            DataTable table = new DataTable();
-            table.Columns.Add("Dosage", typeof(int));
-            table.Columns.Add("Drug", typeof(string));
-            table.Columns.Add("Patient", typeof(string));
-            table.Columns.Add("Date", typeof(DateTime));
-
-            //
-            // Here we add five DataRows.
-            //
-            table.Rows.Add(25, "Indocin", "David", DateTime.Now);
-            table.Rows.Add(50, "Enebrel", "Sam", DateTime.Now);
-            table.Rows.Add(10, "Hydralazine", "Christoff", DateTime.Now);
-            table.Rows.Add(21, "Combivent", "Janet", DateTime.Now);
-            table.Rows.Add(100, "Dilantin", "Melanie", DateTime.Now);
-            return table;
-        }
-
-        public void cargarDatosEntabla() {
-                        
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Buscar_Click(object sender, EventArgs e)
         {
-
+            String razonSocial = Convert.ToString(l_RazonSocial.Text);
+            String eMail = Convert.ToString(l_eMail.Text);
+            String cuit = Convert.ToString(l_CUIT.Text);
+            SQLUtils.SQLUtils.cargarTabla(this.tb_empresas, DaoEmpresa.getEmpresas(razonSocial, eMail, cuit));
+        
         }
 
         private void Limpiar_Click(object sender, EventArgs e)
         {
-
+            this.l_RazonSocial.Text = "";
+            this.l_eMail.Text = "";
+            this.l_CUIT.Text = "";
+            this.tb_empresas.DataSource = null;
+            this.tb_empresas.Refresh();
         }
     }
 }

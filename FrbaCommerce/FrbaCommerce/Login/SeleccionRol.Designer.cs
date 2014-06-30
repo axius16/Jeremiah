@@ -1,6 +1,6 @@
-﻿namespace FrbaCommerce.SeleccionRol
+﻿namespace FrbaCommerce.Login
 {
-    partial class AltaCliente
+    partial class SeleccionRol
     {
         /// <summary>
         /// Required designer variable.

@@ -233,7 +233,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ABMCliente";
             this.Text = "ABM Clientes";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.AbmCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

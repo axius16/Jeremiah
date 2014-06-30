@@ -5,14 +5,11 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class Rol
+    public class Rol
     {
-        Boolean habilitado { get; set; }
-        List<Funcion> funciones { get; set; }
+        public Boolean habilitado { get; set; }
+        public List<Funcion> funciones { get; set; }
 
-        public Rol(Boolean habilitado, List<Funcion> funciones) {
-            this.habilitado = habilitado;
-            this.funciones = funciones;
-        }
+        
     }
 }

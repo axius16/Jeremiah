@@ -5,15 +5,15 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class VentasRealizadas
+    public class VentasRealizadas
     {
-        Usuario usuarioComprador { get; set; }
-        UInt32 cantidad { get; set; }
-        DateTime fechaVenta { get; set; }
-        String calificacion { get; set; }
-        UInt16 cantidadEstrellas { get; set; }
-        String comentarios { get; set; }
-        Publicacion publicacion { get; set; }
+        public Usuario usuarioComprador { get; set; }
+        public UInt32 cantidad { get; set; }
+        public DateTime fechaVenta { get; set; }
+        public String calificacion { get; set; }
+        public UInt16 cantidadEstrellas { get; set; }
+        public String comentarios { get; set; }
+        public Publicacion publicacion { get; set; }
 
         public VentasRealizadas(Usuario usuarioComprador, UInt32 cantidad, DateTime fechaVenta, String calificacion,
                                 UInt16 cantidadEstrellas, String comentarios, Publicacion publicacion){

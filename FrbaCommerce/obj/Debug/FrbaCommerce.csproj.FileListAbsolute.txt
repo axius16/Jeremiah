@@ -29,12 +29,8 @@ C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ResolveAssemb
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABMCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Cliente.AltaCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Cliente.ABMCliente.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.Form1.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.AltaCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Rol.Form1.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABM_Rol.AltaRol.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.SeleccionRol.AltaCliente.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.AltaCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Properties.Resources.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.BuscarEmpresa.Form1.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.BuscarCliente.Form1.resources
@@ -44,3 +40,8 @@ C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.exe
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.pdb
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Asignacion_Telefonos.AsignacionTelefonos.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.AbmEmpresa.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.AltaEmpresa.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.CambiarPass.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.Login.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.SeleccionRol.resources

@@ -7,36 +7,17 @@ namespace FrbaCommerce.Modelo
 {
     class Empresa : Usuario
     {
-        String razonSocial { get; set; }
-        String nombreContacto { get; set; }
-        String mail { get; set; }
-        DateTime fechaCreacion { get; set; }
-        Usuario usuario { get; set; }
-        UInt32 cuit { get; set; }
-        Direccion direccion { set; get; }
+        public Decimal idEmpresa { get; set; }
+        public String razonSocial { get; set; }
+        public String nombreContacto { get; set; }
+        public String mail { get; set; }
+        public DateTime fechaCreacion { get; set; }
+        public Usuario usuario { get; set; }
+        public String cuit { get; set; }
+        public Direccion direccion { set; get; }
+        public List<Telefono> telefonos { set; get; }
 
-        public Empresa(String nombreUsuario, String password, Boolean habilitado, List<Telefono> telefonos, List<Oferta> ofertas, 
-                        List<Pregunta> preguntasRealizadas, List<Rol> roles, String tipoUsuario, UInt32 numeroDocumento, String tipoDocumento, 
-                        String razonSocial, String nombreContacto, String mail, DateTime fechaCreacion, UInt32 cuit, Direccion direccion,
-                        List<Publicacion> publicaciones, List<Factura> facturasPagas)
-        {
-            this.nombreUsuario = nombreUsuario;
-            this.password = password;
-            this.habilitado = habilitado;
-            this.telefonos = telefonos;
-            this.ofertas = ofertas;
-            this.preguntasRealizadas = preguntasRealizadas;
-            this.roles = roles;
-            this.tipoUsuario = tipoUsuario;
-            this.publicaciones = publicaciones;
-            this.facturasPagas = facturasPagas;
-
-            this.razonSocial = razonSocial;
-            this.nombreContacto = nombreContacto;
-            this.mail = mail;
-            this.fechaCreacion = fechaCreacion;
-            this.cuit = cuit;
-            this.direccion = direccion;
+        public Empresa() { 
         }    
     }
 }

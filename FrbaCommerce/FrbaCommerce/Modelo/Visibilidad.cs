@@ -5,12 +5,12 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class Visibilidad
+    public class Visibilidad
     {
-        UInt32 codigo { get; set; }
-        String descripcion { get; set; }
-        Double precio { get; set; }
-        Byte porcentaje { get; set; }
+        public UInt32 codigo { get; set; }
+        public String descripcion { get; set; }
+        public Double precio { get; set; }
+        public Byte porcentaje { get; set; }
 
         public Visibilidad(UInt32 codigo, String descripcion, Double precio, Byte porcentaje)
         {

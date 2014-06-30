@@ -5,20 +5,20 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class Publicacion
+    public class Publicacion
     {
-        UInt32 codigo { get; set; }
-        String codigoPublicacion { get; set; }
-        UInt32 stock { get; set; }
-        Double precio { get; set; }
-        String descripcion { get; set; }
-        DateTime fechaInicio { get; set; }
-        DateTime fechaVencimiento { get; set; }
-        Boolean preguntasActivas { get; set; }
-        List<Rubro> rubros { get; set; }
-        String estado { get; set; }
-        Visibilidad visibilidad { get; set; }
-        Usuario vendedor { get; set; }
+        public UInt32 codigo { get; set; }
+        public String codigoPublicacion { get; set; }
+        public UInt32 stock { get; set; }
+        public Double precio { get; set; }
+        public String descripcion { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public DateTime fechaVencimiento { get; set; }
+        public Boolean preguntasActivas { get; set; }
+        public List<Rubro> rubros { get; set; }
+        public String estado { get; set; }
+        public Visibilidad visibilidad { get; set; }
+        public Usuario vendedor { get; set; }
 
         public Publicacion(UInt32 codigo, String codiogoPublicacion, UInt32 stock, Double precio, String descripcion, DateTime fechaInicio,
                            DateTime fechaVencimiento, Boolean preguntasActivas, List<Rubro> rubros, String estado, Visibilidad visibilidad,

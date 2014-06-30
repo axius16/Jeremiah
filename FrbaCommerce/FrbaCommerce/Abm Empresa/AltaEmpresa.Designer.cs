@@ -1,6 +1,6 @@
 ﻿namespace FrbaCommerce.Abm_Empresa
 {
-    partial class AltaCliente
+    partial class AltaEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,10 @@
         {
             this.Aceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.l_nombreContacto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.EditarTelefonos = new System.Windows.Forms.Button();
-            this.telefonos = new System.Windows.Forms.ListBox();
+            this.l_telefonos = new System.Windows.Forms.ListBox();
             this.l_cuit = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.l_fechaCreacion = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.l_razonSocial = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Cancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.l_nombreContacto = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.Aceptar.Location = new System.Drawing.Point(291, 268);
             this.Aceptar.Name = "Aceptar";
             this.Aceptar.Size = new System.Drawing.Size(75, 23);
-            this.Aceptar.TabIndex = 14;
+            this.Aceptar.TabIndex = 13;
             this.Aceptar.Text = "Aceptar";
             this.Aceptar.UseVisualStyleBackColor = true;
             this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
@@ -74,7 +74,7 @@
             this.groupBox1.Controls.Add(this.l_nombreContacto);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.EditarTelefonos);
-            this.groupBox1.Controls.Add(this.telefonos);
+            this.groupBox1.Controls.Add(this.l_telefonos);
             this.groupBox1.Controls.Add(this.l_cuit);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.l_fechaCreacion);
@@ -103,31 +103,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Empresa";
             // 
+            // l_nombreContacto
+            // 
+            this.l_nombreContacto.Location = new System.Drawing.Point(142, 109);
+            this.l_nombreContacto.Name = "l_nombreContacto";
+            this.l_nombreContacto.Size = new System.Drawing.Size(231, 20);
+            this.l_nombreContacto.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Nombre contacto";
+            // 
             // EditarTelefonos
             // 
             this.EditarTelefonos.Location = new System.Drawing.Point(403, 211);
             this.EditarTelefonos.Name = "EditarTelefonos";
             this.EditarTelefonos.Size = new System.Drawing.Size(75, 23);
-            this.EditarTelefonos.TabIndex = 53;
+            this.EditarTelefonos.TabIndex = 12;
             this.EditarTelefonos.Text = "Editar";
             this.EditarTelefonos.UseVisualStyleBackColor = true;
+            this.EditarTelefonos.Click += new System.EventHandler(this.EditarTelefonos_Click);
             // 
-            // telefonos
+            // l_telefonos
             // 
-            this.telefonos.FormattingEnabled = true;
-            this.telefonos.Location = new System.Drawing.Point(484, 191);
-            this.telefonos.Name = "telefonos";
-            this.telefonos.Size = new System.Drawing.Size(231, 43);
-            this.telefonos.TabIndex = 52;
+            this.l_telefonos.FormattingEnabled = true;
+            this.l_telefonos.Location = new System.Drawing.Point(484, 191);
+            this.l_telefonos.Name = "l_telefonos";
+            this.l_telefonos.Size = new System.Drawing.Size(231, 43);
+            this.l_telefonos.TabIndex = 52;
             // 
             // l_cuit
             // 
             this.l_cuit.BackColor = System.Drawing.SystemColors.Window;
-            this.l_cuit.Enabled = false;
             this.l_cuit.Location = new System.Drawing.Point(142, 83);
             this.l_cuit.Name = "l_cuit";
             this.l_cuit.Size = new System.Drawing.Size(231, 20);
-            this.l_cuit.TabIndex = 51;
+            this.l_cuit.TabIndex = 3;
             // 
             // label13
             // 
@@ -141,11 +157,10 @@
             // l_fechaCreacion
             // 
             this.l_fechaCreacion.BackColor = System.Drawing.SystemColors.Window;
-            this.l_fechaCreacion.Enabled = false;
             this.l_fechaCreacion.Location = new System.Drawing.Point(142, 135);
             this.l_fechaCreacion.Name = "l_fechaCreacion";
             this.l_fechaCreacion.Size = new System.Drawing.Size(231, 20);
-            this.l_fechaCreacion.TabIndex = 51;
+            this.l_fechaCreacion.TabIndex = 5;
             // 
             // label12
             // 
@@ -161,7 +176,7 @@
             this.l_codigoPostal.Location = new System.Drawing.Point(484, 135);
             this.l_codigoPostal.Name = "l_codigoPostal";
             this.l_codigoPostal.Size = new System.Drawing.Size(231, 20);
-            this.l_codigoPostal.TabIndex = 49;
+            this.l_codigoPostal.TabIndex = 10;
             // 
             // label11
             // 
@@ -177,7 +192,7 @@
             this.l_departamento.Location = new System.Drawing.Point(484, 109);
             this.l_departamento.Name = "l_departamento";
             this.l_departamento.Size = new System.Drawing.Size(231, 20);
-            this.l_departamento.TabIndex = 47;
+            this.l_departamento.TabIndex = 9;
             // 
             // label10
             // 
@@ -193,7 +208,7 @@
             this.l_localidad.Location = new System.Drawing.Point(484, 161);
             this.l_localidad.Name = "l_localidad";
             this.l_localidad.Size = new System.Drawing.Size(231, 20);
-            this.l_localidad.TabIndex = 45;
+            this.l_localidad.TabIndex = 11;
             // 
             // label9
             // 
@@ -209,7 +224,7 @@
             this.l_piso.Location = new System.Drawing.Point(484, 83);
             this.l_piso.Name = "l_piso";
             this.l_piso.Size = new System.Drawing.Size(231, 20);
-            this.l_piso.TabIndex = 43;
+            this.l_piso.TabIndex = 8;
             // 
             // label8
             // 
@@ -225,7 +240,7 @@
             this.l_numero.Location = new System.Drawing.Point(484, 57);
             this.l_numero.Name = "l_numero";
             this.l_numero.Size = new System.Drawing.Size(231, 20);
-            this.l_numero.TabIndex = 41;
+            this.l_numero.TabIndex = 7;
             // 
             // label14
             // 
@@ -241,7 +256,7 @@
             this.l_calle.Location = new System.Drawing.Point(484, 31);
             this.l_calle.Name = "l_calle";
             this.l_calle.Size = new System.Drawing.Size(231, 20);
-            this.l_calle.TabIndex = 41;
+            this.l_calle.TabIndex = 6;
             // 
             // label7
             // 
@@ -266,7 +281,7 @@
             this.l_mail.Location = new System.Drawing.Point(142, 57);
             this.l_mail.Name = "l_mail";
             this.l_mail.Size = new System.Drawing.Size(231, 20);
-            this.l_mail.TabIndex = 37;
+            this.l_mail.TabIndex = 2;
             // 
             // label5
             // 
@@ -282,7 +297,7 @@
             this.l_razonSocial.Location = new System.Drawing.Point(142, 31);
             this.l_razonSocial.Name = "l_razonSocial";
             this.l_razonSocial.Size = new System.Drawing.Size(231, 20);
-            this.l_razonSocial.TabIndex = 11;
+            this.l_razonSocial.TabIndex = 1;
             // 
             // label2
             // 
@@ -298,29 +313,13 @@
             this.Cancelar.Location = new System.Drawing.Point(396, 268);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 16;
+            this.Cancelar.TabIndex = 14;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Nombre contacto";
-            // 
-            // l_nombreContacto
-            // 
-            this.l_nombreContacto.Location = new System.Drawing.Point(142, 109);
-            this.l_nombreContacto.Name = "l_nombreContacto";
-            this.l_nombreContacto.Size = new System.Drawing.Size(231, 20);
-            this.l_nombreContacto.TabIndex = 55;
-            // 
-            // AltaCliente
+            // AltaEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,7 +327,7 @@
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AltaCliente";
+            this.Name = "AltaEmpresa";
             this.Text = "Empresa";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -362,7 +361,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox l_numero;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox telefonos;
+        private System.Windows.Forms.ListBox l_telefonos;
         private System.Windows.Forms.Button EditarTelefonos;
         private System.Windows.Forms.TextBox l_nombreContacto;
         private System.Windows.Forms.Label label1;

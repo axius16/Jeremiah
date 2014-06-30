@@ -1,6 +1,6 @@
 ﻿namespace FrbaCommerce.Abm_Empresa
 {
-    partial class Form1
+    partial class AbmEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -41,8 +41,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tb_empresas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_empresas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +62,7 @@
             this.bBaja.Location = new System.Drawing.Point(345, 3);
             this.bBaja.Name = "bBaja";
             this.bBaja.Size = new System.Drawing.Size(75, 23);
-            this.bBaja.TabIndex = 2;
+            this.bBaja.TabIndex = 8;
             this.bBaja.Text = "Eliminar";
             this.bBaja.UseVisualStyleBackColor = true;
             this.bBaja.Click += new System.EventHandler(this.bBaja_Click);
@@ -70,17 +72,17 @@
             this.bAlta.Location = new System.Drawing.Point(135, 3);
             this.bAlta.Name = "bAlta";
             this.bAlta.Size = new System.Drawing.Size(75, 23);
-            this.bAlta.TabIndex = 0;
+            this.bAlta.TabIndex = 6;
             this.bAlta.Text = "Ingresar";
             this.bAlta.UseVisualStyleBackColor = true;
-            this.bAlta.Click += new System.EventHandler(this.button1_Click);
+            this.bAlta.Click += new System.EventHandler(this.bAlta_Click);
             // 
             // bModificacion
             // 
             this.bModificacion.Location = new System.Drawing.Point(240, 3);
             this.bModificacion.Name = "bModificacion";
             this.bModificacion.Size = new System.Drawing.Size(75, 23);
-            this.bModificacion.TabIndex = 1;
+            this.bModificacion.TabIndex = 7;
             this.bModificacion.Text = "Modificar";
             this.bModificacion.UseVisualStyleBackColor = true;
             this.bModificacion.Click += new System.EventHandler(this.bModificacion_Click);
@@ -105,7 +107,7 @@
             this.bLimpiar.Location = new System.Drawing.Point(364, 44);
             this.bLimpiar.Name = "bLimpiar";
             this.bLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.bLimpiar.TabIndex = 11;
+            this.bLimpiar.TabIndex = 5;
             this.bLimpiar.Text = "Limpiar";
             this.bLimpiar.UseVisualStyleBackColor = true;
             this.bLimpiar.Click += new System.EventHandler(this.Limpiar_Click);
@@ -115,7 +117,7 @@
             this.bBuscar.Location = new System.Drawing.Point(283, 44);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(75, 23);
-            this.bBuscar.TabIndex = 10;
+            this.bBuscar.TabIndex = 4;
             this.bBuscar.Text = "Buscar";
             this.bBuscar.UseVisualStyleBackColor = true;
             this.bBuscar.Click += new System.EventHandler(this.Buscar_Click);
@@ -125,21 +127,21 @@
             this.l_eMail.Location = new System.Drawing.Point(80, 41);
             this.l_eMail.Name = "l_eMail";
             this.l_eMail.Size = new System.Drawing.Size(160, 20);
-            this.l_eMail.TabIndex = 7;
+            this.l_eMail.TabIndex = 2;
             // 
             // l_CUIT
             // 
             this.l_CUIT.Location = new System.Drawing.Point(364, 15);
             this.l_CUIT.Name = "l_CUIT";
             this.l_CUIT.Size = new System.Drawing.Size(160, 20);
-            this.l_CUIT.TabIndex = 6;
+            this.l_CUIT.TabIndex = 3;
             // 
             // l_RazonSocial
             // 
             this.l_RazonSocial.Location = new System.Drawing.Point(80, 15);
             this.l_RazonSocial.Name = "l_RazonSocial";
             this.l_RazonSocial.Size = new System.Drawing.Size(160, 20);
-            this.l_RazonSocial.TabIndex = 5;
+            this.l_RazonSocial.TabIndex = 1;
             // 
             // label4
             // 
@@ -168,19 +170,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Razon Social";
             // 
+            // tb_empresas
+            // 
+            this.tb_empresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_empresas.Location = new System.Drawing.Point(12, 97);
+            this.tb_empresas.Name = "tb_empresas";
+            this.tb_empresas.Size = new System.Drawing.Size(554, 219);
+            this.tb_empresas.TabIndex = 2;
+            this.tb_empresas.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 379);
+            this.Controls.Add(this.tb_empresas);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "ABM Empresa";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.AbmEmpresa_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_empresas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bLimpiar;
         private System.Windows.Forms.Button bBuscar;
+        private System.Windows.Forms.DataGridView tb_empresas;
     }
 }

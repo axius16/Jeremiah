@@ -8,11 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace FrbaCommerce.SeleccionRol
+namespace FrbaCommerce.Login
 {
-    public partial class AltaCliente : Form
+    public partial class SeleccionRol : Form
     {
-        public AltaCliente()
+        public SeleccionRol()
         {
             InitializeComponent();
         } 

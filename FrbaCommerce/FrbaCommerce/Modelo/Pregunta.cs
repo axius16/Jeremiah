@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    class Pregunta
+    public class Pregunta
     {
         String pregunta { get; set; }
         DateTime fecha { get; set; }

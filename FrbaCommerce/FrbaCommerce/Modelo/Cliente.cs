@@ -8,8 +8,8 @@ namespace FrbaCommerce.Modelo
 {
     class Cliente : Usuario
     {
-        public Int32 idCliente { get; set; }
-        public decimal numeroDocumento { get; set; }
+        public Decimal idCliente { get; set; }
+        public Decimal numeroDocumento { get; set; }
         public TipoDocumento tipoDocumento { get; set; }
         public String nombre { get; set; }
         public String apellido { get; set; }
@@ -18,6 +18,7 @@ namespace FrbaCommerce.Modelo
         public Usuario usuario { get; set; }
         public String cuil { get; set; }
         public Direccion direccion { set; get; }
+        public List<Telefono> telefonos { set; get; }
 
         public Cliente() { }
         

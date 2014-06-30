@@ -14,9 +14,7 @@ using FrbaCommerce.DAO;
 namespace FrbaCommerce.Abm_Cliente
 {
     public partial class ABMCliente : Form
-    {           
-        
-
+    {    
         public ABMCliente()
         {
             InitializeComponent();
@@ -31,7 +29,7 @@ namespace FrbaCommerce.Abm_Cliente
             this.l_TipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void AbmCliente_Load(object sender, EventArgs e)
         {
 
         }
@@ -74,7 +72,7 @@ namespace FrbaCommerce.Abm_Cliente
                 MessageBox.Show("Por favor seleccione un Cliente.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            DAO.DaoCliente.eliminar(cliente);
+            DaoCliente.eliminar(cliente);
             this.Buscar_Click(sender, e);
         
         }
@@ -87,7 +85,7 @@ namespace FrbaCommerce.Abm_Cliente
             String apellido = Convert.ToString(l_Apellido.Text);
             String mail = Convert.ToString(l_eMail.Text);
 
-            SQLUtils.SQLUtils.cargarTabla(this.t_clientes, DAO.DaoCliente.getClientes(apellido, nombre, numeroDocumento, tipoDocumento, mail));
+            SQLUtils.SQLUtils.cargarTabla(this.t_clientes, DaoCliente.getClientes(apellido, nombre, numeroDocumento, tipoDocumento, mail));
         }
 
         private void Limpiar_Click(object sender, EventArgs e)

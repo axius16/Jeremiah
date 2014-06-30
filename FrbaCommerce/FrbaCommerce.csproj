@@ -62,6 +62,9 @@
     <EmbeddedResource Include="FrbaCommerce\ABM Rol\AltaRol.resx">
       <DependentUpon>AltaRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Login\CambiarPass.resx">
+      <DependentUpon>CambiarPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrbaCommerce\Login\SeleccionRol.resx">
       <DependentUpon>SeleccionRol.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,9 +124,17 @@
     </Compile>
     <Compile Include="FrbaCommerce\Connection\DBConexion.cs" />
     <Compile Include="FrbaCommerce\Connection\SQLUtils.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoEmpresa.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoLogin.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTipoDocumento.cs" />
+    <Compile Include="FrbaCommerce\Login\CambiarPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Login\CambiarPass.Designer.cs">
+      <DependentUpon>CambiarPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrbaCommerce\Login\SeleccionRol.cs">
       <SubType>Form</SubType>
     </Compile>
