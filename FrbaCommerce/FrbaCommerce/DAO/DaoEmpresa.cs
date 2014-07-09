@@ -94,6 +94,7 @@ namespace FrbaCommerce.DAO
                 "update dd.Usuario_Empresa " +
                 "set razon_social = '"+empresa.razonSocial+"', " +
                 "cuit = '" + empresa.cuit + "', " +
+                "mail = '" + empresa.mail + "', " +
                 "fecha_creacion = '" + fecha + "', " +
                 "nombre_contacto = '" + empresa.nombreContacto + "', " +
                 "calle = '" + empresa.direccion.calle+ "', " +

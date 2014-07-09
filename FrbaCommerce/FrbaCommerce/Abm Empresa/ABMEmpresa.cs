@@ -53,7 +53,19 @@ namespace FrbaCommerce.Abm_Empresa
         
         private void bBaja_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine("Clic en Eliminar");
+            Empresa empresa = new Empresa();
+            foreach (DataGridViewRow row in this.tb_empresas.SelectedRows)
+            {
+                empresa = row.DataBoundItem as Empresa;
+            }
+            if (empresa.idEmpresa == 0)
+            {
+                MessageBox.Show("Por favor seleccione una Empresa.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DaoEmpresa.eliminar(empresa);
+            this.Buscar_Click(sender, e);
+        
         }
 
         private void Buscar_Click(object sender, EventArgs e)

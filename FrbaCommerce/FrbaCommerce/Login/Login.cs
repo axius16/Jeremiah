@@ -64,29 +64,24 @@ namespace FrbaCommerce.Login
                         return;
                     }
                     else { 
-                        //cierro esta ventana
+                        this.Dispose();
                         //abro la ventana de seleccion de menus
                     }
                 }
                 else
                 {
                     DBConexion.rolSeleccionado = rolesActivos.First();
-                    //SessionManager.CurrentRol = user.RolesActivos.First();
-                    //cierro esta ventana
+                    this.Dispose();
                     //abro la ventana de seleccion de menus
                 }                
             }
             else
-                throw new Exception("El usuario no cuenta con roles que se encuentren activos.");
+                throw new Exception("El usuario no tiene ningún rol asignado.");
         }
-                   
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         } 
-
-        
-
     }
 }

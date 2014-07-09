@@ -15,11 +15,7 @@ namespace FrbaCommerce.DAO
         public DaoCliente() { 
         }
 
-        public Cliente getInstance(UInt32 idCliente){
-           return null;
-        }
-
-        static public List<Cliente> getClientes(String apellido, String nombre, String dni, TipoDocumento tipoDoc, String mail) {
+         static public List<Cliente> getClientes(String apellido, String nombre, String dni, TipoDocumento tipoDoc, String mail) {
             List<Cliente> clientes = new List<Cliente>();
 
             String query = "";
@@ -148,16 +144,28 @@ namespace FrbaCommerce.DAO
         {
             String fecha = cliente.fechaNacimiento.ToString("d");
             Int32 nuevoIdCliente = getProximoIdCliente();
+
             String sql =
             "insert into DD.Usuario_Cliente " +
-            "(id_usuario, id_domicilio, tipo_doc, " +
-            "nro_doc, apellido, nombre, fecha_nac, cuil, mail) " +
-            "values " +
-            nuevoIdCliente + ", 1, 1, " +
-            cliente.numeroDocumento + ", '" + cliente.apellido + "', '" +
-            cliente.nombre + "', '" + fecha + "', '" +
-            cliente.cuil + "', '" + cliente.mail + "')";
-
+            "(id_usuario, tipo_doc, nro_doc, apellido, nombre, fecha_nac, " +
+            "cuil, reputacion, mail, calle, " +
+            "nro_calle, piso, depto, codigo_postal, localidad, ciudad)" +
+            "values(" +
+            nuevoIdCliente +", '"+
+            cliente.tipoDocumento.idTipoDocumento + "', '"+
+            cliente.numeroDocumento + "', '" +
+            cliente.apellido + "', '" +
+            cliente.nombre + "', '" +
+            fecha + "', '" +
+            cliente.cuil + "', '" +
+            cliente.mail + "', '" +
+            cliente.direccion.calle + "', '" +
+            cliente.direccion.numero + "', '" +
+            cliente.direccion.piso + "', '" +
+            cliente.direccion.departamento + "', '" +
+            cliente.direccion.codigoPostal + "', '" +
+            cliente.direccion.ciudad + "');";
+            
             DaoTelefono daoTel = new DaoTelefono();
             //persistir telefonos
 

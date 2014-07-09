@@ -62,6 +62,12 @@
     <EmbeddedResource Include="FrbaCommerce\ABM Rol\AltaRol.resx">
       <DependentUpon>AltaRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Visibilidad\ABMVisibilidad.resx">
+      <DependentUpon>ABMVisibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Abm Visibilidad\AltaVisibilidad.resx">
+      <DependentUpon>AltaVisibilidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrbaCommerce\Login\CambiarPass.resx">
       <DependentUpon>CambiarPass.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,8 +128,21 @@
     <Compile Include="FrbaCommerce\ABM Rol\ABMRol.Designer.cs">
       <DependentUpon>ABMRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaCommerce\Abm Visibilidad\ABMVisibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Visibilidad\ABMVisibilidad.Designer.cs">
+      <DependentUpon>ABMVisibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Visibilidad\AltaVisibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Abm Visibilidad\AltaVisibilidad.Designer.cs">
+      <DependentUpon>AltaVisibilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrbaCommerce\Connection\DBConexion.cs" />
     <Compile Include="FrbaCommerce\Connection\SQLUtils.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoVisibilidad.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoEmpresa.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoLogin.cs" />
@@ -175,12 +194,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrbaCommerce\Abm Rubro\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrbaCommerce\Abm Visibilidad\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrbaCommerce\Abm Visibilidad\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrbaCommerce\Calificar Vendedor\Form1.cs">

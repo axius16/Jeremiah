@@ -7,17 +7,13 @@ namespace FrbaCommerce.Modelo
 {
     public class Visibilidad
     {
-        public UInt32 codigo { get; set; }
+        public Decimal idVisibilidad { get; set; }
+        public Decimal codigo { get; set; }
         public String descripcion { get; set; }
-        public Double precio { get; set; }
-        public Byte porcentaje { get; set; }
+        public Decimal precio { get; set; }
+        public Decimal porcentaje { get; set; }
+        public Decimal cantidadDias { get; set; }
 
-        public Visibilidad(UInt32 codigo, String descripcion, Double precio, Byte porcentaje)
-        {
-            this.codigo = codigo;
-            this.descripcion = descripcion;
-            this.precio = precio;
-            this.porcentaje = porcentaje;
-        }
+        public Visibilidad() { }
     }
 }
