@@ -42,12 +42,15 @@
             this.bCancelar = new System.Windows.Forms.Button();
             this.ch_habilitado = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.t_codigo = new System.Windows.Forms.TextBox();
+            this.lbCodigo = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbDescripcion
             // 
             this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(29, 26);
+            this.lbDescripcion.Location = new System.Drawing.Point(6, 65);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lbDescripcion.TabIndex = 0;
@@ -56,7 +59,7 @@
             // lbPrecioPublicar
             // 
             this.lbPrecioPublicar.AutoSize = true;
-            this.lbPrecioPublicar.Location = new System.Drawing.Point(29, 77);
+            this.lbPrecioPublicar.Location = new System.Drawing.Point(6, 114);
             this.lbPrecioPublicar.Name = "lbPrecioPublicar";
             this.lbPrecioPublicar.Size = new System.Drawing.Size(96, 13);
             this.lbPrecioPublicar.TabIndex = 2;
@@ -65,7 +68,7 @@
             // lbPorcentajeVenta
             // 
             this.lbPorcentajeVenta.AutoSize = true;
-            this.lbPorcentajeVenta.Location = new System.Drawing.Point(29, 128);
+            this.lbPorcentajeVenta.Location = new System.Drawing.Point(6, 163);
             this.lbPorcentajeVenta.Name = "lbPorcentajeVenta";
             this.lbPorcentajeVenta.Size = new System.Drawing.Size(104, 13);
             this.lbPorcentajeVenta.TabIndex = 4;
@@ -74,7 +77,7 @@
             // lbDuracion
             // 
             this.lbDuracion.AutoSize = true;
-            this.lbDuracion.Location = new System.Drawing.Point(29, 179);
+            this.lbDuracion.Location = new System.Drawing.Point(6, 212);
             this.lbDuracion.Name = "lbDuracion";
             this.lbDuracion.Size = new System.Drawing.Size(50, 13);
             this.lbDuracion.TabIndex = 6;
@@ -82,35 +85,35 @@
             // 
             // t_descripcion
             // 
-            this.t_descripcion.Location = new System.Drawing.Point(30, 48);
+            this.t_descripcion.Location = new System.Drawing.Point(9, 86);
             this.t_descripcion.Name = "t_descripcion";
-            this.t_descripcion.Size = new System.Drawing.Size(224, 20);
+            this.t_descripcion.Size = new System.Drawing.Size(245, 20);
             this.t_descripcion.TabIndex = 1;
             // 
             // t_precioPorPublicar
             // 
-            this.t_precioPorPublicar.Location = new System.Drawing.Point(30, 99);
+            this.t_precioPorPublicar.Location = new System.Drawing.Point(9, 135);
             this.t_precioPorPublicar.Name = "t_precioPorPublicar";
-            this.t_precioPorPublicar.Size = new System.Drawing.Size(224, 20);
+            this.t_precioPorPublicar.Size = new System.Drawing.Size(245, 20);
             this.t_precioPorPublicar.TabIndex = 3;
             // 
             // t_porcentajeVenta
             // 
-            this.t_porcentajeVenta.Location = new System.Drawing.Point(30, 150);
+            this.t_porcentajeVenta.Location = new System.Drawing.Point(9, 184);
             this.t_porcentajeVenta.Name = "t_porcentajeVenta";
-            this.t_porcentajeVenta.Size = new System.Drawing.Size(224, 20);
+            this.t_porcentajeVenta.Size = new System.Drawing.Size(245, 20);
             this.t_porcentajeVenta.TabIndex = 5;
             // 
             // t_duracion
             // 
-            this.t_duracion.Location = new System.Drawing.Point(30, 201);
+            this.t_duracion.Location = new System.Drawing.Point(9, 233);
             this.t_duracion.Name = "t_duracion";
-            this.t_duracion.Size = new System.Drawing.Size(224, 20);
+            this.t_duracion.Size = new System.Drawing.Size(245, 20);
             this.t_duracion.TabIndex = 7;
             // 
             // bAceptar
             // 
-            this.bAceptar.Location = new System.Drawing.Point(58, 273);
+            this.bAceptar.Location = new System.Drawing.Point(58, 311);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(75, 23);
             this.bAceptar.TabIndex = 8;
@@ -120,7 +123,7 @@
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(163, 273);
+            this.bCancelar.Location = new System.Drawing.Point(163, 311);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(75, 23);
             this.bCancelar.TabIndex = 9;
@@ -131,7 +134,7 @@
             // ch_habilitado
             // 
             this.ch_habilitado.AutoSize = true;
-            this.ch_habilitado.Location = new System.Drawing.Point(32, 236);
+            this.ch_habilitado.Location = new System.Drawing.Point(9, 269);
             this.ch_habilitado.Name = "ch_habilitado";
             this.ch_habilitado.Size = new System.Drawing.Size(73, 17);
             this.ch_habilitado.TabIndex = 10;
@@ -140,33 +143,53 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.t_codigo);
+            this.groupBox1.Controls.Add(this.lbCodigo);
+            this.groupBox1.Controls.Add(this.ch_habilitado);
+            this.groupBox1.Controls.Add(this.lbDescripcion);
+            this.groupBox1.Controls.Add(this.lbPrecioPublicar);
+            this.groupBox1.Controls.Add(this.lbPorcentajeVenta);
+            this.groupBox1.Controls.Add(this.t_duracion);
+            this.groupBox1.Controls.Add(this.lbDuracion);
+            this.groupBox1.Controls.Add(this.t_porcentajeVenta);
+            this.groupBox1.Controls.Add(this.t_descripcion);
+            this.groupBox1.Controls.Add(this.t_precioPorPublicar);
             this.groupBox1.Location = new System.Drawing.Point(13, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 256);
+            this.groupBox1.Size = new System.Drawing.Size(272, 296);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // t_codigo
+            // 
+            this.t_codigo.Location = new System.Drawing.Point(9, 37);
+            this.t_codigo.Name = "t_codigo";
+            this.t_codigo.Size = new System.Drawing.Size(245, 20);
+            this.t_codigo.TabIndex = 12;
+            this.t_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbCodigo
+            // 
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.Location = new System.Drawing.Point(6, 16);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lbCodigo.TabIndex = 11;
+            this.lbCodigo.Text = "Codigo";
             // 
             // AltaVisibilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 306);
-            this.Controls.Add(this.ch_habilitado);
+            this.ClientSize = new System.Drawing.Size(297, 349);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bAceptar);
-            this.Controls.Add(this.t_duracion);
-            this.Controls.Add(this.t_porcentajeVenta);
-            this.Controls.Add(this.t_precioPorPublicar);
-            this.Controls.Add(this.t_descripcion);
-            this.Controls.Add(this.lbDuracion);
-            this.Controls.Add(this.lbPorcentajeVenta);
-            this.Controls.Add(this.lbPrecioPublicar);
-            this.Controls.Add(this.lbDescripcion);
             this.Controls.Add(this.groupBox1);
             this.Name = "AltaVisibilidad";
             this.Text = "Visibilidad";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -184,5 +207,7 @@
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.CheckBox ch_habilitado;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox t_codigo;
+        private System.Windows.Forms.Label lbCodigo;
     }
 }

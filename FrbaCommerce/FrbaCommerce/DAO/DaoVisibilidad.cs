@@ -12,9 +12,7 @@ namespace FrbaCommerce.DAO
 {
     class DaoVisibilidad
     {
-        public DaoVisibilidad()
-        { 
-        }
+        public DaoVisibilidad() { }
 
         static public List<Visibilidad> getVisibilidades(String p_codigo, String p_descripcion)
         {

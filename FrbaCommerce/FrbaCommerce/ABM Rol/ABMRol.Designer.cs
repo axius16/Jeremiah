@@ -1,6 +1,6 @@
 ﻿namespace FrbaCommerce.Abm_Rol
 {
-    partial class Form1
+    partial class ABMRol
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bBaja = new System.Windows.Forms.Button();
             this.bAlta = new System.Windows.Forms.Button();
             this.bModificacion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.l_rol = new System.Windows.Forms.TextBox();
             this.bBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.tb_roles = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_roles)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bBaja);
             this.panel1.Controls.Add(this.bAlta);
             this.panel1.Controls.Add(this.bModificacion);
             this.panel1.Location = new System.Drawing.Point(12, 322);
@@ -50,19 +50,9 @@
             this.panel1.Size = new System.Drawing.Size(301, 45);
             this.panel1.TabIndex = 1;
             // 
-            // bBaja
-            // 
-            this.bBaja.Location = new System.Drawing.Point(188, 0);
-            this.bBaja.Name = "bBaja";
-            this.bBaja.Size = new System.Drawing.Size(75, 23);
-            this.bBaja.TabIndex = 2;
-            this.bBaja.Text = "Eliminar";
-            this.bBaja.UseVisualStyleBackColor = true;
-            this.bBaja.Click += new System.EventHandler(this.bBaja_Click);
-            // 
             // bAlta
             // 
-            this.bAlta.Location = new System.Drawing.Point(26, 0);
+            this.bAlta.Location = new System.Drawing.Point(72, 0);
             this.bAlta.Name = "bAlta";
             this.bAlta.Size = new System.Drawing.Size(75, 23);
             this.bAlta.TabIndex = 0;
@@ -72,7 +62,7 @@
             // 
             // bModificacion
             // 
-            this.bModificacion.Location = new System.Drawing.Point(107, 0);
+            this.bModificacion.Location = new System.Drawing.Point(153, 0);
             this.bModificacion.Name = "bModificacion";
             this.bModificacion.Size = new System.Drawing.Size(75, 23);
             this.bModificacion.TabIndex = 1;
@@ -116,19 +106,29 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Rol";
             // 
-            // Form1
+            // tb_roles
+            // 
+            this.tb_roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_roles.Location = new System.Drawing.Point(13, 69);
+            this.tb_roles.Name = "tb_roles";
+            this.tb_roles.Size = new System.Drawing.Size(300, 247);
+            this.tb_roles.TabIndex = 2;
+            // 
+            // ABMRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 379);
+            this.Controls.Add(this.tb_roles);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "ABMRol";
             this.Text = "ABM Rol";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.ABMRol_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_roles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,12 +136,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button bBaja;
         private System.Windows.Forms.Button bModificacion;
         private System.Windows.Forms.Button bAlta;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.TextBox l_rol;
+        private System.Windows.Forms.DataGridView tb_roles;
     }
 }

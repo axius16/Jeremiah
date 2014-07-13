@@ -11,7 +11,7 @@ namespace FrbaCommerce.DAO
 
         static List<TipoDocumento> tiposDocumento = null;
 
-        public static TipoDocumento getTipoDocumento(Int32 id_TipoDocumento)
+        public static TipoDocumento getTipoDocumento(Decimal id_TipoDocumento)
         {
             if (tiposDocumento == null)
             {

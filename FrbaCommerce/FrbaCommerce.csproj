@@ -142,6 +142,8 @@
     </Compile>
     <Compile Include="FrbaCommerce\Connection\DBConexion.cs" />
     <Compile Include="FrbaCommerce\Connection\SQLUtils.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoFuncionalidad.cs" />
+    <Compile Include="FrbaCommerce\DAO\DaoRol.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoVisibilidad.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoEmpresa.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoCliente.cs" />
@@ -171,7 +173,7 @@
     <Compile Include="FrbaCommerce\Modelo\Direccion.cs" />
     <Compile Include="FrbaCommerce\Modelo\Empresa.cs" />
     <Compile Include="FrbaCommerce\Modelo\Factura.cs" />
-    <Compile Include="FrbaCommerce\Modelo\Funcion.cs" />
+    <Compile Include="FrbaCommerce\Modelo\Funcionalidad.cs" />
     <Compile Include="FrbaCommerce\Modelo\Oferta.cs" />
     <Compile Include="FrbaCommerce\Modelo\Pregunta.cs" />
     <Compile Include="FrbaCommerce\Modelo\Publicacion.cs" />

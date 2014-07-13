@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.l_rol = new System.Windows.Forms.TextBox();
+            this.t_rol = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ch_habilitado = new System.Windows.Forms.CheckBox();
             this.bFiltrarFuncionalidad = new System.Windows.Forms.Button();
-            this.l_funcionalidad = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.t_funcionalidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bMoverADerecha = new System.Windows.Forms.Button();
             this.bMoverAIzquierda = new System.Windows.Forms.Button();
             this.bAceptar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
-            this.l_habilitado = new System.Windows.Forms.CheckBox();
+            this.tb_admitidas = new System.Windows.Forms.DataGridView();
+            this.tb_disponibles = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_admitidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_disponibles)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -54,25 +56,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Rol";
             // 
-            // l_rol
+            // t_rol
             // 
-            this.l_rol.Location = new System.Drawing.Point(51, 32);
-            this.l_rol.Name = "l_rol";
-            this.l_rol.Size = new System.Drawing.Size(249, 20);
-            this.l_rol.TabIndex = 5;
+            this.t_rol.Location = new System.Drawing.Point(51, 32);
+            this.t_rol.Name = "t_rol";
+            this.t_rol.Size = new System.Drawing.Size(249, 20);
+            this.t_rol.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.l_habilitado);
+            this.groupBox1.Controls.Add(this.tb_disponibles);
+            this.groupBox1.Controls.Add(this.tb_admitidas);
+            this.groupBox1.Controls.Add(this.ch_habilitado);
             this.groupBox1.Controls.Add(this.bFiltrarFuncionalidad);
-            this.groupBox1.Controls.Add(this.l_funcionalidad);
-            this.groupBox1.Controls.Add(this.listBox2);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.t_funcionalidad);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.bMoverADerecha);
             this.groupBox1.Controls.Add(this.bMoverAIzquierda);
-            this.groupBox1.Controls.Add(this.l_rol);
+            this.groupBox1.Controls.Add(this.t_rol);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -80,6 +82,16 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rol";
+            // 
+            // ch_habilitado
+            // 
+            this.ch_habilitado.AutoSize = true;
+            this.ch_habilitado.Location = new System.Drawing.Point(387, 35);
+            this.ch_habilitado.Name = "ch_habilitado";
+            this.ch_habilitado.Size = new System.Drawing.Size(92, 17);
+            this.ch_habilitado.TabIndex = 16;
+            this.ch_habilitado.Text = "Rol Habilitado";
+            this.ch_habilitado.UseVisualStyleBackColor = true;
             // 
             // bFiltrarFuncionalidad
             // 
@@ -89,29 +101,14 @@
             this.bFiltrarFuncionalidad.TabIndex = 15;
             this.bFiltrarFuncionalidad.Text = "?";
             this.bFiltrarFuncionalidad.UseVisualStyleBackColor = true;
+            this.bFiltrarFuncionalidad.Click += new System.EventHandler(this.bFiltrarFuncionalidad_Click);
             // 
-            // l_funcionalidad
+            // t_funcionalidad
             // 
-            this.l_funcionalidad.Location = new System.Drawing.Point(463, 76);
-            this.l_funcionalidad.Name = "l_funcionalidad";
-            this.l_funcionalidad.Size = new System.Drawing.Size(170, 20);
-            this.l_funcionalidad.TabIndex = 14;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(25, 109);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(275, 199);
-            this.listBox2.TabIndex = 13;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(387, 109);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(275, 199);
-            this.listBox1.TabIndex = 12;
+            this.t_funcionalidad.Location = new System.Drawing.Point(463, 76);
+            this.t_funcionalidad.Name = "t_funcionalidad";
+            this.t_funcionalidad.Size = new System.Drawing.Size(170, 20);
+            this.t_funcionalidad.TabIndex = 14;
             // 
             // label3
             // 
@@ -133,7 +130,7 @@
             // 
             // bMoverADerecha
             // 
-            this.bMoverADerecha.Location = new System.Drawing.Point(306, 214);
+            this.bMoverADerecha.Location = new System.Drawing.Point(306, 181);
             this.bMoverADerecha.Name = "bMoverADerecha";
             this.bMoverADerecha.Size = new System.Drawing.Size(75, 23);
             this.bMoverADerecha.TabIndex = 9;
@@ -143,7 +140,7 @@
             // 
             // bMoverAIzquierda
             // 
-            this.bMoverAIzquierda.Location = new System.Drawing.Point(306, 185);
+            this.bMoverAIzquierda.Location = new System.Drawing.Point(306, 210);
             this.bMoverAIzquierda.Name = "bMoverAIzquierda";
             this.bMoverAIzquierda.Size = new System.Drawing.Size(75, 23);
             this.bMoverAIzquierda.TabIndex = 8;
@@ -171,15 +168,21 @@
             this.bCancelar.UseVisualStyleBackColor = true;
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
-            // l_habilitado
+            // tb_admitidas
             // 
-            this.l_habilitado.AutoSize = true;
-            this.l_habilitado.Location = new System.Drawing.Point(387, 35);
-            this.l_habilitado.Name = "l_habilitado";
-            this.l_habilitado.Size = new System.Drawing.Size(92, 17);
-            this.l_habilitado.TabIndex = 16;
-            this.l_habilitado.Text = "Rol Habilitado";
-            this.l_habilitado.UseVisualStyleBackColor = true;
+            this.tb_admitidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_admitidas.Location = new System.Drawing.Point(25, 109);
+            this.tb_admitidas.Name = "tb_admitidas";
+            this.tb_admitidas.Size = new System.Drawing.Size(275, 199);
+            this.tb_admitidas.TabIndex = 17;
+            // 
+            // tb_disponibles
+            // 
+            this.tb_disponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tb_disponibles.Location = new System.Drawing.Point(387, 109);
+            this.tb_disponibles.Name = "tb_disponibles";
+            this.tb_disponibles.Size = new System.Drawing.Size(275, 199);
+            this.tb_disponibles.TabIndex = 18;
             // 
             // AltaRol
             // 
@@ -193,6 +196,8 @@
             this.Text = "Rol";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_admitidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_disponibles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,10 +205,8 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox l_rol;
+        private System.Windows.Forms.TextBox t_rol;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bMoverADerecha;
@@ -211,7 +214,9 @@
         private System.Windows.Forms.Button bAceptar;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button bFiltrarFuncionalidad;
-        private System.Windows.Forms.TextBox l_funcionalidad;
-        private System.Windows.Forms.CheckBox l_habilitado;
+        private System.Windows.Forms.TextBox t_funcionalidad;
+        private System.Windows.Forms.CheckBox ch_habilitado;
+        private System.Windows.Forms.DataGridView tb_disponibles;
+        private System.Windows.Forms.DataGridView tb_admitidas;
     }
 }

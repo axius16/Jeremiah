@@ -40,7 +40,7 @@ namespace FrbaCommerce.Abm_Visibilidad
             }
             if (visibilidad.idVisibilidad == 0)
             {
-                MessageBox.Show("Por favor seleccione una Empresa.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor seleccione una Visibilidad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             AltaEmpresa ventana = new AltaEmpresa();
@@ -59,7 +59,7 @@ namespace FrbaCommerce.Abm_Visibilidad
             }
             if (visibilidad.idVisibilidad == 0)
             {
-                MessageBox.Show("Por favor seleccione una Vibilidad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor seleccione una Visibilidad.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             DaoVisibilidad.eliminar(visibilidad);
