@@ -16,7 +16,7 @@ namespace FrbaCommerce
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrbaCommerce.Abm_Empresa.AbmEmpresa());
+            Application.Run(new Abm_Empresa.AbmEmpresa());
         }
     }
 }

@@ -65,7 +65,6 @@ namespace FrbaCommerce.DAO
             {
                 updateRol(rol);
             }
-
         }
 
         private static void updateRol(Rol rol)
@@ -101,8 +100,8 @@ namespace FrbaCommerce.DAO
                 //funciones del objeto menos las de la base = quitadas
                 funcionalidadesNuevas.Remove(unaFunc);
             }
-            quitarFuncionalidades(rol.idRol, funcionalidadesAnteriores);
-            insertarFuncionalidades(rol.idRol, funcionalidadesNuevas);
+            DaoRol.quitarFuncionalidades(rol.idRol, funcionalidadesAnteriores);
+            DaoRol.insertarFuncionalidades(rol.idRol, funcionalidadesNuevas);
 
         }
 

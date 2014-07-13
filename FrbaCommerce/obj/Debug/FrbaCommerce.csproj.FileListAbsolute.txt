@@ -47,3 +47,4 @@ C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.exe
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.pdb
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Rol.ABMRol.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Generar_Publicacion.GenerarPublicacion.resources

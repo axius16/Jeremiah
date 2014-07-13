@@ -68,6 +68,9 @@
     <EmbeddedResource Include="FrbaCommerce\Abm Visibilidad\AltaVisibilidad.resx">
       <DependentUpon>AltaVisibilidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrbaCommerce\Generar Publicacion\GenerarPublicacion.resx">
+      <DependentUpon>GenerarPublicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrbaCommerce\Login\CambiarPass.resx">
       <DependentUpon>CambiarPass.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +153,12 @@
     <Compile Include="FrbaCommerce\DAO\DaoLogin.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTelefono.cs" />
     <Compile Include="FrbaCommerce\DAO\DaoTipoDocumento.cs" />
+    <Compile Include="FrbaCommerce\Generar Publicacion\GenerarPublicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrbaCommerce\Generar Publicacion\GenerarPublicacion.Designer.cs">
+      <DependentUpon>GenerarPublicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrbaCommerce\Login\CambiarPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,12 +235,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrbaCommerce\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrbaCommerce\Generar Publicacion\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrbaCommerce\Generar Publicacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrbaCommerce\Gestion de Preguntas\Form1.cs">
