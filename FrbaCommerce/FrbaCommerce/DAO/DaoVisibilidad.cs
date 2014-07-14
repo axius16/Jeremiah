@@ -14,6 +14,35 @@ namespace FrbaCommerce.DAO
     {
         public DaoVisibilidad() { }
 
+        static public Visibilidad getVisibilidad(Decimal p_idVisibilidad)
+        {
+            String query = "SELECT * FROM DD.visibilidad " +
+                "where id_visibilidad = " + p_idVisibilidad + "%' ";
+            
+
+            SqlConnection conn = DBConexion.getConn();
+            SqlCommand sql = new SqlCommand(query, conn);
+            SqlDataReader rs = sql.ExecuteReader();
+
+            Visibilidad visibilidad = new Visibilidad();
+
+            while (rs.Read())
+            {
+                if (!rs.IsDBNull(0))
+                {
+                    visibilidad.idVisibilidad = rs.GetDecimal(rs.GetOrdinal("id_visibilidad"));
+                    visibilidad.codigo = rs.GetDecimal(rs.GetOrdinal("codigo"));
+                    visibilidad.descripcion = rs.GetString(rs.GetOrdinal("descripcion"));
+                    visibilidad.porcentaje = rs.GetDecimal(rs.GetOrdinal("precio"));
+                    visibilidad.precio = rs.GetDecimal(rs.GetOrdinal("porcentaje"));
+                    visibilidad.cantidadDias = rs.GetDecimal(rs.GetOrdinal("cant_dias"));
+                }
+
+            }
+            conn.Close();
+            return visibilidad;
+        }
+
         static public List<Visibilidad> getVisibilidades(String p_codigo, String p_descripcion)
         {
             List<Visibilidad> visibilidades = new List<Visibilidad>();

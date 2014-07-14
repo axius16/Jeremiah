@@ -5,14 +5,14 @@ using System.Text;
 
 namespace FrbaCommerce.Modelo
 {
-    public class Rubro
+    public class TipoPublicacion
     {
-        public Decimal idRubro { get; set; }
-        public Decimal codigo { get; set; }
+        public Decimal idTipoPublicacion { get; set; }
         public String descripcion { get; set; }
 
 
-        public Rubro() {
+        public TipoPublicacion()
+        {
             }
     }
 }

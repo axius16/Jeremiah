@@ -23,8 +23,6 @@ C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Asi
 C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABM_Rol.AltaRol.resources
 C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Rol.Form1.resources
 C:\Users\Axius\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Login.AltaCliente.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\bin\Debug\ConsoleApplication.exe
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\bin\Debug\ConsoleApplication.pdb
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABMCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Cliente.AltaCliente.resources
@@ -32,9 +30,11 @@ C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Asignacion_Telefonos.AsignacionTelefonos.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.AbmEmpresa.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Empresa.AltaEmpresa.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Rol.ABMRol.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.ABM_Rol.AltaRol.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Visibilidad.AbmVisibilidad.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Visibilidad.AltaVisibilidad.resources
+C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Generar_Publicacion.GenerarPublicacion.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.CambiarPass.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.SeleccionRol.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Login.Login.resources
@@ -44,7 +44,3 @@ C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.RegistroUsuario.AltaCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.AgregarRol.AltaCliente.resources
 C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.csproj.GenerateResource.Cache
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.exe
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\ConsoleApplication.pdb
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.Abm_Rol.ABMRol.resources
-C:\Users\Nazareno\Documents\GitHub\Jeremiah\FrbaCommerce\obj\Debug\FrbaCommerce.FrbaCommerce.Generar_Publicacion.GenerarPublicacion.resources
